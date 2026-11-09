@@ -5,16 +5,16 @@ Tout se lit ici, sans installer de plugin, connecter Notion ou fournir une clé.
 
 ## Le problème rencontré
 
-Je développais les sites web des client de l'agent Vertigo. Je disposais de mon propre espace de travail sur Notion et structurait le knowledge par projet (client, audit site web, remontées des informations, structuration de la doc technique, priorisation, validation, état d'avancement, livraison). 
+Je développais les sites web des client de l'agence web Vertigo. Je disposais de mon propre espace de travail sur Notion et structurait le knowledge par projet (client, audit site web, remontées des informations, structuration de la doc technique, priorisation, validation, état d'avancement, livraison, maintenance, etc). 
 
-En travaillant avec les commerciaux, j’ai constaté un autre problème : ils pouvaient se marcher dessus dans la
+En travaillant avec les founders, j’ai constaté un autre problème : ils pouvaient se marcher dessus dans la
 prospection. Qui suivait le prospect ? Quelle avait été la dernière action ?
 Quelles consignes étaient encore valables ? Le contexte restait dispersé dans
-les outils et les conversations.
+leurs outils et leurs conversations sur ChatGPT.
 
 La construction a suivi ce besoin : **conserver le contexte dans Notion → contrôler
-les enregistrements → guider l’agent avec des compétences → organiser les rôles
-META/SALES → rendre ce parcours accessible dans le chat habituel.**
+les enregistrements → guider leurs propres agents via ChatGPT avec des compétences → organiser les rôles
+META (admin) /SALES (ops) → rendre ce parcours accessible dans le chat habituel.**
 Ces couches expliquent les choix ; ce n’est pas une chronologie datée de chaque commit.
 
 ```mermaid
