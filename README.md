@@ -5,8 +5,9 @@ Tout se lit ici, sans installer de plugin, connecter Notion ou fournir une clé.
 
 ## Le problème rencontré
 
-Je développais les sites web de l’équipe. En travaillant avec les commerciaux,
-j’ai constaté un autre problème : ils pouvaient se marcher dessus dans la
+Je développais les sites web des client de l'agent Vertigo. Je disposais de mon propre espace de travail sur Notion et structurait le knowledge par projet (client, audit site web, remontées des informations, structuration de la doc technique, priorisation, validation, état d'avancement, livraison). 
+
+En travaillant avec les commerciaux, j’ai constaté un autre problème : ils pouvaient se marcher dessus dans la
 prospection. Qui suivait le prospect ? Quelle avait été la dernière action ?
 Quelles consignes étaient encore valables ? Le contexte restait dispersé dans
 les outils et les conversations.
