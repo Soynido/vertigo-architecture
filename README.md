@@ -75,7 +75,7 @@ dépôt source. La révision actuellement servie et les versions privées instal
 n’ont pas été revalidées pour cette revue. Voir le
 [manifeste de provenance](provenance/source-manifest.json).
 
-## Ce qu’un CTO peut évaluer
+## Ce qu'on peut évaluer :
 
 - La séparation entre consigne au modèle, contrôle déterministe et validation humaine.
 - Le chemin d’une orientation jusqu’à son reçu, sans écraser les règles locales.
