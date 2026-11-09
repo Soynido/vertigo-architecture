@@ -46,3 +46,15 @@ Il a demandé de bloquer le contrôle si le scanner échoue ou ne fournit pas so
 rapport. Le préparateur a ajouté un code de sortie dédié aux détections, exigé un
 rapport JSON valide et couvert ces cas par des tests. Le relecteur a rendu le
 verdict **APPROVE** sur ces changements.
+
+## Page illustrée des usages réels
+
+Un agent Codex indépendant a relu la nouvelle page, ses trois SVG, les deux
+pièces de preuve ajoutées et les liens d’entrée. Il a rendu **APPROVE**, sans
+blocage. Il a confirmé la séparation entre témoignages, instantanés Notion,
+chargement par l’agent et effets métier. La présentation du rôle manager ne
+réattribue pas les publications historiques de l’opérateur.
+
+Cette revue est restée locale et en lecture seule, sans test ni outil live.
+Le modèle exact et sa consommation ne sont pas exposés. L’approbation porte
+sur ces ajouts documentaires, sans certification de la production.

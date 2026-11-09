@@ -1,0 +1,45 @@
+{
+  "kind": "OWNER_REPORTED_USAGE/1",
+  "prepared_on": "2026-11-09",
+  "source": "Owner messages supplied in this conversation; no private account access.",
+  "report_dates": "Not established for each message; no reconstructed event timestamp.",
+  "reported_cases": [
+    {
+      "case": "Julian resume",
+      "prompt_quoted_by_owner": "on reprends ?",
+      "reported_result": "Le propriétaire dit avoir vu le système reprendre, organiser et prioriser le travail."
+    },
+    {
+      "case": "Fresh chat resume",
+      "reported_result": "Le propriétaire rapporte des reprises en chat neuf pour les collaborateurs ; cette pièce ne contient pas leurs réponses privées."
+    },
+    {
+      "case": "Aron adds methods",
+      "reported_result": "Le propriétaire affirme qu’Aron a ajouté ses compétences via son plugin, indépendamment de lui. La présence des pages est corroborée par la pièce 07, sans preuve indépendante du chat auteur."
+    },
+    {
+      "case": "Batch preparation blocked",
+      "prompt_shared_by_owner": "je veux mes 150",
+      "reported_result": "Le retour de l’agent partagé par le propriétaire indique une création en série non confirmée et conserve le dernier total fiable ; aucun envoi Gmail confirmé par cette pièce."
+    },
+    {
+      "case": "CSV read failure",
+      "reported_error_type": "ServiceUnavailableError",
+      "reported_result": "Le propriétaire a transmis un extrait de lecture de CSV ayant retourné cette exception. Les logs opérateur sélectionnés ne corroborent pas ce cycle client."
+    },
+    {
+      "case": "Team allocation",
+      "allocation_shared_by_owner": {
+        "Aron": "1–25",
+        "Célia": "26–52",
+        "Julian": "53–73"
+      },
+      "reported_result": "Répartition d’équipe retrouvée dans l’orientation destinataire de Julian, selon la pièce 07."
+    }
+  ],
+  "limits": [
+    "Owner-reported use takes its stated status; it is not an independently captured private-agent trace.",
+    "No prompts beyond the owner-provided excerpts, no private answers or reasoning reconstructed.",
+    "No satisfaction score, Gmail send, universal installation or current production pass claimed."
+  ]
+}

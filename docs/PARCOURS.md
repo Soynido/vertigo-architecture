@@ -1,5 +1,8 @@
 # Trois demandes suivies de bout en bout
 
+Pour voir les demandes et les résultats côté équipe, commencer par
+[les cas réels illustrés](UTILISER-VERTIGO.md).
+
 Les étapes ci-dessous décrivent le mécanisme. Les exemples métier sont fictifs.
 Le niveau de preuve de l’usage réel reste dans [l’état des preuves](STATE-OF-EVIDENCE.md).
 

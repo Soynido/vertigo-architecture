@@ -3,6 +3,9 @@
 **Revue technique privée · 9 novembre 2026.**
 Tout se lit ici, sans installer de plugin, connecter Notion ou fournir une clé.
 
+**[Voir l’équipe au travail](docs/UTILISER-VERTIGO.md)** : des cas réels illustrés,
+les demandes dans le chat, les résultats et leur utilité, avec les liens vers les preuves.
+
 ## Le système en un coup d’œil
 
 **L’équipe ne code pas.** Après la mise en place du plugin et de ses connexions,
@@ -70,9 +73,10 @@ MCP est le protocole qui permet à l’agent d’appeler les outils du serveur.
 
 ## Lecture en cinq minutes
 
-1. [Architecture et séparation des responsabilités](docs/ARCHITECTURE.md).
-2. [Trois parcours concrets, de la demande aux preuves](docs/PARCOURS.md).
-3. [Ce qui est prouvé, déclaré ou encore inconnu](docs/STATE-OF-EVIDENCE.md).
+1. [Cas réels : demandes, résultats et utilité](docs/UTILISER-VERTIGO.md).
+2. [Architecture et séparation des responsabilités](docs/ARCHITECTURE.md).
+3. [Trois parcours concrets, de la demande aux preuves](docs/PARCOURS.md).
+4. [Ce qui est prouvé, déclaré ou encore inconnu](docs/STATE-OF-EVIDENCE.md).
 
 Pour aller jusqu’aux sources : [carte du code](docs/CODE-MAP.md),
 [contrats MCP](docs/MCP-CONTRACTS.md), [schémas Notion](notion/README.md),

@@ -5,6 +5,14 @@ HEAD `fad1d38e1577956ed094baa3941c3d3fa90bb67c` **plus ses modifications locales
 Les reçus opérateur sélectionnés datent du 16 au 20 octobre. Ils ne certifient pas
 la production au 9 novembre. La version actuellement servie n’a pas été sondée.
 
+Complément documentaire du 9 novembre : dix pages Notion ont été consultées pour
+les [cas réels illustrés](UTILISER-VERTIGO.md). Les instantanés retournés datent du
+16 octobre au 6 novembre ; leur consultation ne vaut pas vérification temps réel.
+La [pièce 07](../evidence/07-notion-operational-artifacts.json) relève la répartition
+de Julian, les méthodes d’Aron et le positionnement lié depuis son playbook.
+La [pièce 08](../evidence/08-owner-reported-operational-usage.json) conserve le
+statut rapporté des usages transmis par le propriétaire.
+
 | Affirmation | Source | Niveau / limite |
 |---|---|---|
 | Le contrôle Sales et les orientations sont implémentés | Code et tests présents | Mécanisme ; résultat des tests actuels séparé |

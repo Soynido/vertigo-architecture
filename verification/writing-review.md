@@ -13,3 +13,16 @@ et comptes rendus.
 Le rédacteur conserve la formulation des sources copiées et des noms d’API.
 Les archives gardent leurs formulations historiques, avec un statut explicite.
 Cette relecture n’est pas une mesure d’utilisabilité auprès d’un CTO.
+
+## Page d’usage du 9 novembre
+
+La page et ses trois illustrations suivent les cas réels retrouvés dans les
+échanges et les documents Notion. Chaque cas place le résultat à côté de son
+utilité, puis donne sa source et la portée de la preuve. Les demandes citées
+restent celles transmises par le propriétaire. Les extraits conservés dans les
+méthodes sont signalés comme tels ; le rédacteur ne les transforme pas en
+réponses privées d’un agent. Les autres usages sont regroupés par besoin dans
+quatre sections dépliables.
+
+La relecture a retiré le scénario inventé du premier brouillon avant publication.
+Elle a conservé les dates, les incertitudes et les auteurs des événements réels.

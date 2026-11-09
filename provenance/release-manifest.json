@@ -3,10 +3,10 @@
   "prepared_on": "2026-11-09",
   "source_head": "fad1d38e1577956ed094baa3941c3d3fa90bb67c",
   "reviewer": "INDEPENDENT_CODEX_READ_ONLY",
-  "review_result": "APPROVE_FOR_CTO_READING_DOSSIER_WITH_SUBSCRIPTION_OVERVIEW_AND_SECRET_SCAN_FOLLOWUP",
-  "preserves_owner_readme_edits_through_commit": "eefb5e437fe49c3a777862ad5c5f0a72b1f65e11",
+  "review_result": "APPROVE_FOR_CTO_READING_DOSSIER_WITH_REAL_OPERATIONAL_CASES",
+  "preserves_owner_readme_edits_through_commit": "1d0ec8b3c21f208e69585e0001eb63c6aa81baa5",
   "self_excluded_from_hash_list": true,
-  "file_count": 497,
+  "file_count": 504,
   "files": [
     {
       "path": ".dockerignore",
@@ -35,8 +35,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "36a8d9ccde2f64de365d03dcb130f070ee8307b3b0a0d79cb841db97df67fed4",
-      "bytes": 7388
+      "sha256": "0b8371c1ce9052874987a4c5fce5ae08b7cff80e75be909cd60045dd549e3124",
+      "bytes": 7649
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -185,8 +185,8 @@
     },
     {
       "path": "docs/PARCOURS.md",
-      "sha256": "28c329f90bcc49308b783a74cb47c7c87da0c7fbc415daf9f5e476ebafd2690a",
-      "bytes": 5082
+      "sha256": "623fdcc307aca9b464897b7ca70b5dbe94f4d1bfbab1b444cc3f079cd0a2e85c",
+      "bytes": 5204
     },
     {
       "path": "docs/SALES-RUNTIME-CONTRACT-0.5.2-CANDIDATE.md",
@@ -200,8 +200,28 @@
     },
     {
       "path": "docs/STATE-OF-EVIDENCE.md",
-      "sha256": "726242de98e302e4e7b8e53894bffc973e0851a8a6a001d4de8a5c6c36392c44",
-      "bytes": 2325
+      "sha256": "8622f723acec57cd1c1441f2a6918421d78ba33c9643244cae4f8377aeb4de0e",
+      "bytes": 2893
+    },
+    {
+      "path": "docs/UTILISER-VERTIGO.md",
+      "sha256": "b14c48c6380f6cafb9a51d82fbbe8f0d975a86c20560447f526ab575ffe76e96",
+      "bytes": 22302
+    },
+    {
+      "path": "docs/illustrations/couches.svg",
+      "sha256": "70e5f66ce72a66f1b5b23f3d8706d1d1e91ab1b83906152abbb019f9e956fdd9",
+      "bytes": 4790
+    },
+    {
+      "path": "docs/illustrations/daily-go.svg",
+      "sha256": "d99536b66fdd05b3c00346b1cd13005bc03e1ea6318d14d1177ee2540649eb87",
+      "bytes": 3975
+    },
+    {
+      "path": "docs/illustrations/equipe.svg",
+      "sha256": "ae63c36241106a1d69bb6d9cdceefdfebfa4a6d8e1664d215ed4900231b10e7c",
+      "bytes": 5249
     },
     {
       "path": "evidence/01-direction-publication.json",
@@ -234,9 +254,19 @@
       "bytes": 562
     },
     {
+      "path": "evidence/07-notion-operational-artifacts.json",
+      "sha256": "1725f0a6c571dc8a2bd6eb51afe2f087f76ddc9457bbd887a34c10db6aebbde1",
+      "bytes": 7060
+    },
+    {
+      "path": "evidence/08-owner-reported-operational-usage.json",
+      "sha256": "c920cc2daa9470b2aa42778b0368092bab5f727a0868a79cd866ad5122b1ad45",
+      "bytes": 2206
+    },
+    {
       "path": "evidence/README.md",
-      "sha256": "c28b88c054d44f37c66c95d09b93a3a7a45f55e1ffa776cc446b09445f03d2bd",
-      "bytes": 1345
+      "sha256": "4a3a4d5dabd2a33834e7e15748a005cadde51ace6f6c922a5352d6d352ac59cb",
+      "bytes": 2157
     },
     {
       "path": "examples/work-dossier.json",
@@ -2365,8 +2395,8 @@
     },
     {
       "path": "provenance/README.md",
-      "sha256": "b80229befa9a40fb4ec21fa36f9f318dbab7f2a16e24af41bb1e36e89d3bc871",
-      "bytes": 1912
+      "sha256": "ec3cd2441b326f1b47978dcf615d16fd9fce36f38e887729c9b5953dad6708a1",
+      "bytes": 2448
     },
     {
       "path": "provenance/source-manifest.json",
@@ -2440,8 +2470,8 @@
     },
     {
       "path": "verification/README.md",
-      "sha256": "22425a47437d7c572c797440156d6d0652d1050cb46e2b3363457c31b7155636",
-      "bytes": 1457
+      "sha256": "0e14c07c270373dbfe8f2a3af2f291997f8ba8cf98a2b1de70b398fb1d908120",
+      "bytes": 1773
     },
     {
       "path": "verification/RESULTS.md",
@@ -2455,13 +2485,13 @@
     },
     {
       "path": "verification/dossier-audit.json",
-      "sha256": "e00ac517d386996e45eb8746f7cf35d1d0819be2114098f64e6befdbae244179",
+      "sha256": "4567a761f1311f923d2bcb7d8af60957cf7dcd9eb0b1b5880113a9ee0a29c86b",
       "bytes": 131
     },
     {
       "path": "verification/independent-review.md",
-      "sha256": "09bc61a9577769f2097c2b236a76a53a6958b16f841a40c744a0d1a42de6a0ca",
-      "bytes": 2438
+      "sha256": "480c8ccead911ccda63db6cda6ec6cf7e1771d90f51503574b0aeae3fd35bbd2",
+      "bytes": 3087
     },
     {
       "path": "verification/local-checks.json",
@@ -2469,9 +2499,14 @@
       "bytes": 10602
     },
     {
+      "path": "verification/operational-documentation.json",
+      "sha256": "29f2c80f92136d0a53e12fc845d04ac141b718cd3120e61aded3c3b356bd159d",
+      "bytes": 1613
+    },
+    {
       "path": "verification/private-value-check.json",
-      "sha256": "910e3a6b21db17636903a6efdeea8e7f3b3cecc7f73167f253d73663a2036719",
-      "bytes": 203
+      "sha256": "ce79d4ea25b782189fd1601d4b5889764e19a3755d2a4a0912c445523895ebd2",
+      "bytes": 366
     },
     {
       "path": "verification/secret-scan-history.json",
@@ -2480,7 +2515,7 @@
     },
     {
       "path": "verification/secret-scan.json",
-      "sha256": "460d8c2f110af4f1ec8da0f8e0bf864c43c54f90dfacb98b557c5f4ed931642b",
+      "sha256": "2435429defbe13e4b49e51deef3c96ea7bb4aa3070f1b9cc680150d02945eae6",
       "bytes": 1738
     },
     {
@@ -2490,8 +2525,8 @@
     },
     {
       "path": "verification/writing-review.md",
-      "sha256": "40dda2996866d49344c836bad7407bdc28972c7e31378116719ada1c5bc78782",
-      "bytes": 881
+      "sha256": "7fa73adff3831b7866a19a48b74a5dbd43a02974d7ee3afff1126e54575639a2",
+      "bytes": 1596
     }
   ]
 }

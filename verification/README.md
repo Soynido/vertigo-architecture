@@ -19,5 +19,10 @@ conserve les commandes, codes de sortie et compteurs de chaque passage.
 La [revue indépendante](independent-review.md) porte sur documentation et anonymisation.
 Les contrôles ne certifient ni la production ni un compte privé ChatGPT.
 
+La [vérification de la page d’usage](operational-documentation.json) relève les
+liens et fragments, les rendus SVG inspectés et la portée des nouvelles pièces
+Notion. Elle conserve l’exception sur les prénoms demandée par le propriétaire ;
+les contrôles des secrets et coordonnées restent appliqués.
+
 Après l’alerte GitGuardian : [analyse et correction](GITGUARDIAN-20261109.md),
 [scan standard complémentaire](secret-scan.json).

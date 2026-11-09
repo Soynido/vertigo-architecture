@@ -32,3 +32,12 @@ les liens cassés et les incohérences de l’exemple.
 Le propriétaire conserve ses modifications et ses signatures GitHub dans l’historique.
 Les contrôles d’anonymisation visent les données des collaborateurs, les accès et
 les preuves copiées ; ils ne réécrivent pas ses signatures de compte.
+
+## Cas opérationnels ajoutés le 9 novembre
+
+À la demande du propriétaire, la page d’usage et ses illustrations conservent
+les prénoms Célia, Aron et Julian. Célia y figure comme manager. Les nouvelles
+pièces documentent des contenus réels consultés dans Notion et des usages
+rapportés ; leurs résumés retirent identifiants, coordonnées et données clients.
+Les réponses privées ne sont pas reconstituées. Cette autorisation sur les prénoms
+ne réintroduit pas les identités privées dans les sources anonymisées.

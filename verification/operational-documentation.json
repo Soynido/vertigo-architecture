@@ -1,0 +1,36 @@
+{
+  "kind": "OPERATIONAL_DOCUMENTATION_CHECK/1",
+  "relative_links_and_fragments_checked": 104,
+  "svg_count": 3,
+  "svg_rendered_and_visually_inspected": true,
+  "new_live_business_operations": 0,
+  "invented_cases_in_new_page": false,
+  "issues": [],
+  "passed": true,
+  "prepared_on": "2026-11-09",
+  "scope": "Documentation-only follow-up in isolated CTO review repository",
+  "notion_pages_consulted": 10,
+  "notion_snapshot_dates": "2026-10-16 to 2026-11-06; not a real-time readback claim",
+  "new_evidence_derivatives": 2,
+  "real_operational_cases": 6,
+  "independent_review": "CODEX_READ_ONLY_APPROVE",
+  "source_snapshot_files_verified_by_existing_audit": 452,
+  "product_code_changes": 0,
+  "production_deployments": 0,
+  "notion_writes": 0,
+  "rules_or_history_mutations": 0,
+  "private_data_policy": "Three owner-authorized first names in seven explicit documentation paths; exact private values and all mailbox patterns still checked.",
+  "verification_commands": [
+    "python3 audit/check_dossier.py",
+    "python3 audit/scan_secrets.py",
+    "rsvg-convert docs/illustrations/equipe.svg -o <local-preview>",
+    "rsvg-convert docs/illustrations/daily-go.svg -o <local-preview>",
+    "rsvg-convert docs/illustrations/couches.svg -o <local-preview>"
+  ],
+  "limits": [
+    "No new real-chat or production test.",
+    "Relative links and heading fragments checked by a local review helper; helper not shipped as product code.",
+    "Three renders inspected locally, not a user usability study.",
+    "Existing historical test failures remain in RESULTS.md; unchanged runtime tests not rerun."
+  ]
+}

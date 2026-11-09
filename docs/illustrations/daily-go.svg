@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 805" width="1120" height="805" role="img" aria-labelledby="title description">
+<title id="title">Daily GO : reprise réelle rapportée par le propriétaire</title>
+<desc id="description">Le propriétaire rapporte avoir vu Julian demander « on reprends ? », puis obtenir une reprise, une organisation et une priorisation du travail. La réponse privée n’est pas reproduite. Le coach présent dans les sources décrit les lectures et la préparation attendues.</desc>
+<rect width="1120" height="805" fill="#f6f4ec"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .label{letter-spacing:1.3px}</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#7c9388"/></marker></defs>
+<text x="30" y="35" font-size="15" fill="#245f4b" font-weight="700" class="label">02 · LE DAILY GO</text>
+<text x="30" y="82" font-size="36" fill="#263b35" font-weight="700" class="">Reprendre à partir du travail conservé</text>
+<text x="30" y="117" font-size="20" fill="#596b64" font-weight="400" class="">Usage rapporté par le propriétaire ; méthode présente dans les compétences.</text>
+<rect x="30" y="151" width="650" height="117" rx="18" fill="#e6eee3" stroke="#d9dfd3"/>
+<text x="55" y="186" font-size="16" fill="#245f4b" font-weight="700" class="label">JULIAN · MESSAGE CITÉ PAR LE PROPRIÉTAIRE</text>
+<text x="55" y="237" font-size="35" fill="#263b35" font-weight="700" class="">« on reprends ? »</text>
+<rect x="30" y="290" width="650" height="229" rx="18" fill="#ffffff" stroke="#d9dfd3"/>
+<text x="55" y="328" font-size="16" fill="#385d9e" font-weight="700" class="label">RÉSULTAT RAPPORTÉ</text>
+<text x="55" y="373" font-size="25" fill="#263b35" font-weight="700" class="">Le système reprend le travail, l’organise et</text>
+<text x="55" y="409" font-size="25" fill="#263b35" font-weight="700" class="">le priorise.</text>
+<text x="55" y="463" font-size="19" fill="#596b64" font-weight="400" class="">La réponse privée n’est pas reconstituée dans cette</text>
+<text x="55" y="491" font-size="19" fill="#596b64" font-weight="400" class="">présentation.</text>
+<rect x="710" y="151" width="380" height="368" rx="18" fill="#ffffff" stroke="#d9dfd3"/>
+<text x="735" y="190" font-size="24" fill="#245f4b" font-weight="700" class="">Pourquoi c’est utile</text>
+<text x="735" y="233" font-size="22" fill="#263b35" font-weight="400" class="">Retrouver le contexte sans</text>
+<text x="735" y="264" font-size="22" fill="#263b35" font-weight="400" class="">recommencer le cadrage.</text>
+<text x="735" y="332" font-size="22" fill="#263b35" font-weight="400" class="">Comprendre ce qui mérite</text>
+<text x="735" y="363" font-size="22" fill="#263b35" font-weight="400" class="">l’attention maintenant.</text>
+<text x="735" y="431" font-size="22" fill="#263b35" font-weight="400" class="">Garder la décision humaine</text>
+<text x="735" y="462" font-size="22" fill="#263b35" font-weight="400" class="">sur les choix proposés.</text>
+<rect x="30" y="550" width="1060" height="195" rx="18" fill="#eceff5" stroke="#d9dfd3"/>
+<text x="55" y="591" font-size="24" fill="#385d9e" font-weight="700" class="">Ce que la compétence demande à l’agent</text>
+<text x="55" y="637" font-size="22" fill="#263b35" font-weight="400" class="">Relire le cap et les engagements → examiner les dossiers → préparer un résultat.</text>
+<text x="55" y="677" font-size="20" fill="#596b64" font-weight="400" class="">Le modèle analyse et rédige. Le harness contrôle les appels reçus. Les reprises en chat</text>
+<text x="55" y="705" font-size="20" fill="#596b64" font-weight="400" class="">neuf sont aussi rapportées par le propriétaire.</text>
+<text x="30" y="783" font-size="15" fill="#596b64" font-weight="400" class="">Documentation privée · Cas réels et mécanismes documentés · Sources détaillées dans la page</text>
+</svg>

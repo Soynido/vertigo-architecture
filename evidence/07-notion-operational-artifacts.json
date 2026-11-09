@@ -1,0 +1,134 @@
+{
+  "kind": "ANONYMIZED_NOTION_READBACK_DERIVATIVE/1",
+  "prepared_on": "2026-11-09",
+  "retrieval_mode": "Native Notion connector, read-only, authenticated workspace identity checked",
+  "pages_fetched": 10,
+  "selected_artifacts": [
+    {
+      "artifact": "Répartition équipe : lot de Julian",
+      "source_scope": "Julian / Sales OS / orientation version 2",
+      "source_returned_as_of": "2026-10-26T13:59:16.900Z",
+      "source_last_edited_at": "2026-10-26T13:59:16.900Z",
+      "source_text_sha256": "7dd0e88ef9d68a710291c8be90451919448c06d0e04827da9e51018487041084",
+      "version": 2,
+      "horizon": {
+        "start": "2026-10-26",
+        "end": "2026-10-27"
+      },
+      "authority_change": false,
+      "allocation": {
+        "Aron": {
+          "first": 1,
+          "last": 25,
+          "count": 25
+        },
+        "Célia": {
+          "first": 26,
+          "last": 52,
+          "count": 27
+        },
+        "Julian": {
+          "first": 53,
+          "last": 73,
+          "count": 21
+        }
+      },
+      "unassigned_by_this_direction": {
+        "first": 74,
+        "last": 100
+      },
+      "recipient_lot_rows": 21,
+      "source_decision": "Répartition décidée par l’équipe et transmise par le propriétaire.",
+      "selected_constraints": [
+        "Contrôler responsable existant, historique, doublons, coordonnées et refus avant contact.",
+        "Aucun accès supplémentaire de Julian au META ou au Sales OS d’Aron.",
+        "La répartition ne crée ni quota, ni autorité, ni campagne ; préserver les suivis existants."
+      ],
+      "claim": "Recipient document present in returned snapshot; consumption and prospect contact not independently observed."
+    },
+    {
+      "artifact": "Operations & Playbooks",
+      "source_scope": "Aron / Sales OS / Operations & Playbooks",
+      "source_returned_as_of": "2026-11-06T13:08:56.070Z",
+      "source_last_edited_at": "2026-11-04T15:33:05.669Z",
+      "source_text_sha256": "23214ea1f9edc1121f3b0430f196bf1528c774b8a16aa947b006030361320b1a",
+      "observed_references": [
+        "Audit UX SEO et valorisation des assets, 20 octobre",
+        "Contrôle linguistique français, 20 octobre",
+        "Carrousel narratif personnalisé par prospect",
+        "Positionnement, 4 novembre"
+      ],
+      "positioning_reference_callout_present": true,
+      "claim": "Parent page contains references to the selected method pages and current-reference callout within its returned snapshot."
+    },
+    {
+      "artifact": "Audit UX SEO et valorisation des contenus",
+      "source_scope": "Aron / Sales OS / méthode liée depuis Operations & Playbooks",
+      "source_returned_as_of": "2026-10-20T07:38:26.155Z",
+      "source_last_edited_at": "2026-10-20T07:38:26.140Z",
+      "source_text_sha256": "154ebac34e682c1b2a537f15bed14ebb460382474f210b3575177d816c7d6eff",
+      "summary": "Audit du site, inventaire des contenus existants, faits à vérifier et brouillons sans envoi autonome.",
+      "exact_excerpt": "Cette page ajoute une règle de playbook, ne modifie pas les gates ni les droits d'envoi.",
+      "claim": "Method content and parent reference observed; private-chat authorship and later reload not independently observed."
+    },
+    {
+      "artifact": "Contrôle linguistique français",
+      "source_scope": "Aron / Sales OS / méthode liée depuis Operations & Playbooks",
+      "source_returned_as_of": "2026-10-20T07:48:16.766Z",
+      "source_last_edited_at": "2026-10-20T07:48:16.753Z",
+      "source_text_sha256": "a0b82baf7b2d5e4891d5a233cebc78a984ef5d3346836abff8e756ba28e5b06a",
+      "summary": "Relire la phrase entière après personnalisation, puis objet, texte et HTML avant enregistrement.",
+      "exact_excerpt": "Votre site pourrait permettre de mieux expliquer, grâce à l'image, vos savoir-faire et vos processus industriels.",
+      "claim": "Method content and parent reference observed; private-chat authorship and later reload not independently observed."
+    },
+    {
+      "artifact": "Carrousel narratif personnalisé",
+      "source_scope": "Aron / Sales OS / méthode liée depuis Operations & Playbooks",
+      "source_returned_as_of": "2026-10-20T12:25:56.499Z",
+      "source_last_edited_at": "2026-10-20T12:25:56.486Z",
+      "source_text_sha256": "a6853190aa0334d9cfa51c8013d681e38853d311d2bd5edd03f4bf29b34da084",
+      "summary": "Adapter le récit à l’activité réelle, aux contenus observés et à l’objectif commercial recherché.",
+      "exact_excerpt": "Ne pas inventer de chiffres, d'assets, de contenus observés ou d'audit déjà fait.",
+      "claim": "Method content and parent reference observed; private-chat authorship and later reload not independently observed."
+    },
+    {
+      "artifact": "Positionnement : design vidéo et expériences web au défilement",
+      "source_scope": "Aron / Sales OS / Operations & Playbooks / Positionnement du 4 novembre",
+      "source_returned_as_of": "2026-11-04T15:32:35.456Z",
+      "source_last_edited_at": "2026-11-04T15:32:35.419Z",
+      "source_text_sha256": "f0302f6917c515daec24c664dc17558af2e79e4ca646b854d242dc265450bc38",
+      "page_declares_request_and_validation_by": "Aron",
+      "exact_excerpts": [
+        "Nous transformons vos photos et vidéos existantes en expériences web qui se révèlent au défilement.",
+        "Votre agence peut continuer à gérer votre site. Nous pouvons concevoir la séquence, préparer les médias et travailler avec elle sur son intégration, après vérification des possibilités techniques."
+      ],
+      "message_structure": [
+        "Observation réellement établie",
+        "Scène proposée avec les contenus existants",
+        "Bénéfice recherché",
+        "Invitation à examiner la piste"
+      ],
+      "included_outputs": [
+        "Pitch oral",
+        "Trame de premier email à personnaliser",
+        "Relance",
+        "Réponses aux objections"
+      ],
+      "source_declares_no_history_rewrite_or_campaign": true,
+      "claim": "Stored positioning and parent reference observed. Direct request and approval are stated by the page, not independently authenticated as a human action."
+    }
+  ],
+  "source_freshness": "Returned snapshots are dated 16 October to 6 November 2026; querying on 9 November does not establish live freshness. Dates recorded per selected artifact.",
+  "anonymization": {
+    "private_ids_urls_contacts_and_client_data_excluded": true,
+    "first_names_authorized_by_owner_for_operational_documentation": true,
+    "source_signatures_validate_this_derivative": false,
+    "raw_provider_responses_published": false
+  },
+  "limits": [
+    "No new chat, server probe, business operation, Notion write or permission change.",
+    "Source hashes identify original returned texts and do not sign this transformed derivative.",
+    "Presence of content, its private-agent loading and business effect remain distinct claims.",
+    "The historical META root snapshot is not used to assert current manager permissions."
+  ]
+}
