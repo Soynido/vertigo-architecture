@@ -1,0 +1,8 @@
+# VERTIGO harness — daily backup of the transaction store (PV-WRITE-001 / W1.10).
+# TEMPLATE: __VERTIGO_REPO__ is replaced by the repository path at install time; no server path is assumed here.
+# Install on the server, from the repository root:
+#   sed "s#__VERTIGO_REPO__#$(pwd)#" deploy/backup.cron > /etc/cron.d/vertigo-harness-backup && chmod 644 /etc/cron.d/vertigo-harness-backup
+# 03:15 UTC every day; output appended to /var/log/vertigo-harness-backup.log.
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+15 3 * * * root cd __VERTIGO_REPO__ && deploy/backup.sh >> /var/log/vertigo-harness-backup.log 2>&1

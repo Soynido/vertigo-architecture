@@ -1,0 +1,22 @@
+{
+  "name": "@vertigo/mail-executor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VERTIGO OS Plugin V0 — deterministic Mail Executor: the only path for automated / pre-approved production Gmail sends. No LLM. Accepts immutable intent_ref + action_key only; refuses on any UNKNOWN/HOLD/VIOLATION.",
+  "type": "module",
+  "main": "./dist/packages/mail-executor/src/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test 'test/**/*.test.ts'",
+    "execute": "node --env-file=../../.env src/cli.ts"
+  },
+  "dependencies": {
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "typescript": "^5.9.0"
+  }
+}

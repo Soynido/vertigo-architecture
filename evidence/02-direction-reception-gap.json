@@ -1,0 +1,22 @@
+{
+  "kind": "ANONYMIZED_RECEIPT_DERIVATIVE/1",
+  "evidence_id": "02-direction-reception-gap",
+  "prepared_on": "2026-11-09",
+  "source_observed_at": "NOT_RECORDED_AT_TOP_LEVEL",
+  "evidence_level": "OPERATOR_SOURCE_READBACK",
+  "source_status": "PUBLICATION_REVERIFIED_RECIPIENT_RECEIPT_ABSENT_PRIVATE_HOST_UNAVAILABLE",
+  "source_sha256": "17ed9460421ce72073b065c1a298f2407396c7e0aab2408113a6afa6019a10c7",
+  "claims_within_source_scope": [
+    "Publication relue et confirmée dans le périmètre du reçu.",
+    "Reçu destinataire absent ; hôte privé indisponible. Ce document conserve ce manque de preuve."
+  ],
+  "anonymization": {
+    "free_text_payloads_included": false,
+    "private_ids_urls_names_signatures_excluded": true,
+    "source_signatures_validate_this_derivative": false
+  },
+  "limits": [
+    "Historical receipt selected by the operator; underlying private observations are not independently replayed by this repository.",
+    "This derivative is not a new test, client event or production acceptance."
+  ]
+}

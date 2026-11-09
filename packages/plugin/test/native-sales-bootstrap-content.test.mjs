@@ -1,0 +1,21 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync,mkdtempSync,mkdirSync,copyFileSync,writeFileSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {execFileSync,spawnSync} from 'node:child_process';
+const generator=new URL('../scripts/generate-sales-bootstrap-content.mjs',import.meta.url);
+test('served bootstrap asset exactly matches canonical files and check mode never repairs drift',()=>{
+ assert.equal(execFileSync(process.execPath,[fileURLToPath(generator),'--check'],{encoding:'utf8'}).trim(),'BOOTSTRAP_CONTENT_CURRENT');
+ const root=mkdtempSync(join(tmpdir(),'bootstrap-content-test.'));
+ for(const d of ['packages/plugin/scripts','packages/harness/src/server','packages/native-sales-bootstrap'])mkdirSync(join(root,d),{recursive:true});
+ const script=join(root,'packages/plugin/scripts/generate-sales-bootstrap-content.mjs');copyFileSync(generator,script);
+ for(const file of ['SKILL.bootstrap.md','OWN_ACCOUNT_UPDATE.md'])copyFileSync(new URL('../../native-sales-bootstrap/'+file,import.meta.url),join(root,'packages/native-sales-bootstrap',file));
+ const output=join(root,'packages/harness/src/server/nativeSalesBootstrapContent.ts');writeFileSync(output,'STALE');
+ const check=spawnSync(process.execPath,[script,'--check'],{encoding:'utf8'});assert.equal(check.status,1);assert.match(check.stderr,/STALE_BOOTSTRAP_CONTENT/);assert.equal(readFileSync(output,'utf8'),'STALE');
+ execFileSync(process.execPath,[script]);assert.equal(execFileSync(process.execPath,[script,'--check'],{encoding:'utf8'}).trim(),'BOOTSTRAP_CONTENT_CURRENT');
+ assert.equal(readFileSync(output,'utf8'),readFileSync(new URL('../../harness/src/server/nativeSalesBootstrapContent.ts',import.meta.url),'utf8'));
+ writeFileSync(join(root,'packages/native-sales-bootstrap/OWN_ACCOUNT_UPDATE.md'),'x'.repeat(22001));
+ const oversized=spawnSync(process.execPath,[script],{encoding:'utf8'});assert.equal(oversized.status,1);assert.match(oversized.stderr,/BOOTSTRAP_CONTENT_BOUND/);
+});

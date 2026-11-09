@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vertigo-hybrid-pilot",
+  "version": "0.1.19",
+  "description": "Essai privé d'orchestration native VERTIGO : contexte réel en lecture seule, note isolée et reprise vérifiée.",
+  "author": {
+    "name": "Valentin Galudec",
+    "email": "person@example.test"
+  },
+  "extensions": {
+    "com.openai": {
+      "apps": "./.app.json",
+      "interface": {
+        "displayName": "VERTIGO — essai privé",
+        "shortDescription": "Reprise et note de test privée",
+        "longDescription": "Candidat privé réservé au propriétaire. Retrouve le META OS existant avec Notion en lecture seule. Pour une note d'essai : conserve l'intention sur le serveur, effectue l'écriture native dans la page de test puis contrôle automatiquement sa présence par une lecture indépendante. Reprend le même journal dans un chat neuf. Aucun changement des OS collaborateurs, aucun envoi ni action de production. Le contrôle atteste seulement la note exacte à l'instant observé, pas une transaction atomique ni la vérité d'autres outils.",
+        "developerName": "Valentin Galudec",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "On reprend mon META OS ? Quelle est la prochaine étape ?",
+          "Note pour notre essai : je préfère traiter les relances le matin."
+        ]
+      }
+    }
+  }
+}

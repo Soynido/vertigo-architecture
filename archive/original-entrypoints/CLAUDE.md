@@ -1,0 +1,3 @@
+# Claude Code — VERTIGO
+
+Suis `AGENTS.md`, notamment la règle de coût et de débit. Tu codes uniquement la task courante. Reprends du commit et du reçu fournis ; n'utilise pas `--resume` sur un ancien historique volumineux et ne relis pas le cache ou le plan entier à chaque appel. Lis seulement `CURRENT`, la section de task et les specs Notion pertinentes une fois au début, puis les deltas nécessaires. Ne répète pas des preuves inchangées. Utilise Claude Max ; si la limite est atteinte, STOP sans API payante de secours. Ne committe, pousse, déploie ou touche au LIVE que si la task et l'orchestrateur le demandent explicitement.

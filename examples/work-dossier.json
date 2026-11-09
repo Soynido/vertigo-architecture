@@ -1,0 +1,64 @@
+{
+  "kind": "SYNTHETIC_EXPLANATORY_DOSSIER/1",
+  "not_a_notion_import": true,
+  "not_a_real_policy": true,
+  "identities": {
+    "owner": "MANAGER",
+    "seller": "SALES_A"
+  },
+  "context": {
+    "role": "Commercial",
+    "expertise": "Préparation de rendez-vous",
+    "target": "Hôtels indépendants"
+  },
+  "rule": {
+    "logical_ref": "RULE_DEMO_1",
+    "text": "Préparer les messages en brouillon ; validation humaine avant tout envoi.",
+    "authority": "EXAMPLE_ONLY"
+  },
+  "work": {
+    "account_ref": "ACCOUNT_DEMO_1",
+    "company": "Hôtel Démonstration",
+    "website": "https://hotel.example.test",
+    "owner": "SALES_A",
+    "next_action": "Préparer la fiche de rendez-vous"
+  },
+  "state": {
+    "logical_ref": "STATE_CURRENT",
+    "last_run_ref": "RUN_DEMO_1",
+    "next_action": "Présenter le brouillon à valider"
+  },
+  "run": {
+    "logical_ref": "RUN_DEMO_1",
+    "status": "COMPLETED",
+    "mutation_refs": [
+      "LEDGER_DEMO_1"
+    ],
+    "claim": "SYNTHETIC_EXAMPLE_ONLY"
+  },
+  "ledger": {
+    "logical_ref": "LEDGER_DEMO_1",
+    "run_ref": "RUN_DEMO_1",
+    "target_ref": "ACCOUNT_DEMO_1",
+    "idempotency_key": "DEMO:PREPARE:1",
+    "operation": "UPDATE",
+    "status": "VERIFIED",
+    "verified_status_is_fictional": true
+  },
+  "orientation": {
+    "logical_ref": "ORIENTATION_DEMO_V1",
+    "recipient": "SALES_A",
+    "version": 1,
+    "objective": "Préparer les échanges clients de la semaine",
+    "constraints": [
+      "Conserver les validations locales"
+    ],
+    "publication": "ILLUSTRATED_NOT_EXECUTED"
+  },
+  "daily_go": {
+    "priority": "Préparer le rendez-vous",
+    "prepared_output": "Fiche synthétique et trame de questions",
+    "human_choice": "Créneau à proposer",
+    "persistent_write_executed": false
+  }
+}

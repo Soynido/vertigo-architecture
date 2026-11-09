@@ -1,0 +1,26 @@
+# One host, one upstream, a real certificate renewed automatically. The path token stays in the URL exactly as
+# it is today, so moving off ngrok changes the hostname and nothing else: the connector is reconfigured once.
+{$HARNESS_DOMAIN} {
+	encode zstd gzip
+	# The MCP endpoint is the whole surface. Everything else gets a flat 404 — no directory listing, no banner,
+	# nothing that describes what runs here.
+	handle /mcp* {
+		reverse_proxy harness:8787 {
+			# Streamable HTTP: no buffering, and long-lived responses must not be cut.
+			flush_interval -1
+		}
+	}
+	handle {
+		respond 404
+	}
+	log {
+		output file /data/access.log
+		# The path carries the principal's secret: never write it to disk.
+		format filter {
+			wrap console
+			fields {
+				request>uri delete
+			}
+		}
+	}
+}

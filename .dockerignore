@@ -1,0 +1,25 @@
+# VERTIGO harness — Docker build context (PV-WRITE-001 / W1.2, PT-IMG-001).
+#
+# The context is the repository root (deploy/docker-compose.yml, `context: ..`). Nothing secret may enter it:
+# the credential and principal registries are MOUNTED read-only at run time (docker-compose.yml), never baked
+# into a layer, and the Notion token and database password reach the container through compose only.
+
+# Secrets and deployment-local material
+config
+.run
+**/.env
+**/.env.*
+!**/.env.example
+**/*.local
+**/*.local.*
+
+# Repository and tooling state
+.git
+.rl4
+.claude
+.codex
+.cursor
+.vscode
+.mcp.json
+**/node_modules
+**/dist

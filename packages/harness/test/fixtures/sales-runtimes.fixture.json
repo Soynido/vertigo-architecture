@@ -1,0 +1,7 @@
+{
+  "runtimes": [
+    { "rep_identity_key": "rep-a", "status": "KNOWN", "root_ref": "fixture-root-a", "expected_instance_id": "SALESOS-FIXTURE-A", "expected_gmail_identity": "rep-a@example.invalid", "pointer_generation": "1" },
+    { "rep_identity_key": "rep-b", "status": "KNOWN", "root_ref": "fixture-root-b", "expected_instance_id": "SALESOS-FIXTURE-B", "expected_gmail_identity": "rep-b@example.invalid", "pointer_generation": "1" },
+    { "rep_identity_key": "rep-c", "status": "NOT_YET_CREATED", "note": "runtime creation scheduled" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "ANONYMIZED_RECEIPT_DERIVATIVE/1",
+  "evidence_id": "04-csv-reporting",
+  "prepared_on": "2026-11-09",
+  "source_observed_at": "2026-10-19T15:52:48.279Z",
+  "evidence_level": "OPERATOR_SERVER_PROBE",
+  "source_status": "SERVER_DEPLOYED_HTTPS_VERIFIED_CLIENT_AUTOMATION_NOT_OBSERVED",
+  "source_sha256": "63c519cbf1ee825393a567e03e7fbb718b677adc710ae93e785babf996576745",
+  "claims_within_source_scope": [
+    "Code de reporting servi et vérifié via des sondes HTTPS opérateur.",
+    "À la fenêtre de ce reçu : aucun rapport authentifié hors sondes observé.",
+    "Le chemin erreur CSV depuis un vrai compte client n’est donc pas démontré par ce reçu."
+  ],
+  "anonymization": {
+    "free_text_payloads_included": false,
+    "private_ids_urls_names_signatures_excluded": true,
+    "source_signatures_validate_this_derivative": false
+  },
+  "limits": [
+    "Historical receipt selected by the operator; underlying private observations are not independently replayed by this repository.",
+    "This derivative is not a new test, client event or production acceptance."
+  ],
+  "selected_facts": {
+    "since": "2026-10-19T15:50:18.352Z",
+    "until": "2026-10-19T15:52:48.279Z",
+    "non_operator_tool_events": 0,
+    "authenticated_reports": 0,
+    "real_chat_origin_proved": false
+  }
+}

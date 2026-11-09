@@ -1,0 +1,106 @@
+{
+  "kind": "ANONYMIZED_SCHEMA_OBSERVATION/1",
+  "observed_on": "2026-11-09",
+  "source": "NOTION_CONNECTOR_DATA_SOURCE_METADATA",
+  "source_alias": "SALES_C_ACCOUNTS",
+  "collection_name": "Accounts",
+  "rows_read": 0,
+  "private_identifiers_removed": true,
+  "scope": "ONE_CONFIGURED_ACCOUNTS_SOURCE_ONLY",
+  "properties": {
+    "Account ID": {
+      "type": "auto_increment_id"
+    },
+    "Company": {
+      "type": "title"
+    },
+    "Do Not Contact": {
+      "type": "checkbox"
+    },
+    "Last Reconciled": {
+      "type": "date"
+    },
+    "Lifecycle": {
+      "type": "select",
+      "options": [
+        "NEW",
+        "RESEARCH",
+        "QUALIFY",
+        "READY_TO_CONTACT",
+        "SENT",
+        "WAITING",
+        "FOLLOWUP_DUE",
+        "REPLIED",
+        "BOUNCED",
+        "OPT_OUT",
+        "MEETING",
+        "NURTURE",
+        "CLOSED"
+      ]
+    },
+    "Next Action": {
+      "type": "text"
+    },
+    "Next Action Date": {
+      "type": "date"
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "Open Gaps": {
+      "type": "text"
+    },
+    "Phone Main": {
+      "type": "phone_number"
+    },
+    "Phone Main Source": {
+      "type": "text"
+    },
+    "Phone Main Status": {
+      "type": "select",
+      "options": [
+        "UNKNOWN",
+        "VERIFIED",
+        "INVALID"
+      ]
+    },
+    "Primary Hypothesis": {
+      "type": "text"
+    },
+    "Qualification": {
+      "type": "select",
+      "options": [
+        "UNASSESSED",
+        "READY",
+        "HOLD",
+        "REJECT"
+      ]
+    },
+    "Score": {
+      "type": "number"
+    },
+    "Segment": {
+      "type": "select"
+    },
+    "Source": {
+      "type": "text"
+    },
+    "Tier": {
+      "type": "select",
+      "options": [
+        "S",
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "Website": {
+      "type": "url"
+    }
+  },
+  "limits": [
+    "Other OS schemas were not revalidated by this observation.",
+    "Option identifiers, source URLs and business rows are excluded.",
+    "Connector text type is reported as returned; the Notion API equivalent is rich_text."
+  ]
+}

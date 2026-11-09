@@ -1,0 +1,22 @@
+{
+  "kind": "ANONYMIZED_RECEIPT_DERIVATIVE/1",
+  "evidence_id": "05-passive-activity",
+  "prepared_on": "2026-11-09",
+  "source_observed_at": "2026-10-20T09:27:54.687Z",
+  "evidence_level": "OPERATOR_SERVER_OBSERVATION",
+  "source_status": "DEPLOYED_OWNER_CONNECTION_OBSERVED_BOUNDED_SAMPLE_NOT_PRODUCT_PASS",
+  "source_sha256": "b0ac247d9bcd388d219573944148aa5c8e60817ba948573641af76c745ad29c5",
+  "claims_within_source_scope": [
+    "Observation côté connexion propriétaire, avec échantillon borné.",
+    "Ni exhaustivité, ni satisfaction, ni effet Gmail/Calendar attesté."
+  ],
+  "anonymization": {
+    "free_text_payloads_included": false,
+    "private_ids_urls_names_signatures_excluded": true,
+    "source_signatures_validate_this_derivative": false
+  },
+  "limits": [
+    "Historical receipt selected by the operator; underlying private observations are not independently replayed by this repository.",
+    "This derivative is not a new test, client event or production acceptance."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "VERTIGO OS",
+  "spec": "PLUGIN_SPEC/0.4.0",
+  "status": "CANDIDATE_NOT_ADOPTED",
+  "adopted": false,
+  "supersedes_nothing": "the governing package manifest (manifest.json, PLUGIN_SPEC/0.3.0) is unchanged and stays governing until Notion adopts this candidate and writes the Plugin Manifest LAST",
+  "description": "Candidate surface for the GTM measurement, learning and guarded provisioning semantics. Same six tools, same Notion-read-only harness (with backend transaction state and verified registry activation), same native Notion writer, same TARGET/FINAL proof. The delta is entirely inside what a runtime may declare and what a record must prove.",
+  "tools": ["os_bind", "os_resume", "os_prepare", "os_verify", "os_handoff", "os_control_status"],
+  "candidate_versions": {
+    "plugin_spec": { "family": "PLUGIN_SPEC", "version": "0.4.0", "role": "CANDIDATE_NOT_ADOPTED" },
+    "contract_pack": { "family": "CONTRACT_PACK", "version": "0.2.0", "role": "CANDIDATE_NOT_ADOPTED", "applies_to": "a binding whose runtime declares the GTM capability; every other binding keeps the adopted policy, byte for byte" },
+    "sales_runtime_contract": { "family": "SALES_RUNTIME_CONTRACT", "version": "0.6.0", "role": "CANDIDATE_NOT_ADOPTED", "dispatch": "only for a runtime whose own canonical Manifest pins it as GOVERNING" },
+    "sales_schema": { "family": "SALES_SCHEMA", "version": "0.6.0", "role": "CANDIDATE_NOT_ADOPTED", "dispatch": "supported schema of the candidate contract line" }
+  },
+  "unchanged_versions": {
+    "meta_spec": { "family": "META_SPEC", "version": "0.6.0", "reason": "no physical incompatibility: the GTM measurement resource is one more registered row of the existing META Resource Registry, and the adopted resume payload is unchanged" },
+    "meta_schema": { "family": "META_SCHEMA", "version": "0.2.0", "reason": "no new META database, property or control-plane object is required" }
+  },
+  "capability_gates": {
+    "sales": "the governing Sales contract adapter of the bound runtime declares capabilities.gtm",
+    "meta": "the runtime registers the GTM measurement resource AND that registration explicitly pins the candidate Contract Pack version and is RESOLVED; a bare registry row adopts nothing",
+    "caller": "no hint, tool argument, environment variable or package flag can switch a capability on"
+  },
+  "candidate_needs": {
+    "META_GTM_ANALYSIS": ["META:SALES_RUNTIME_INPUTS", "META:GTM_METRIC_REFS"],
+    "SALES_GTM_CONTEXT": ["SALES:GTM_CAMPAIGN_CONTEXT"]
+  },
+  "candidate_resources": [
+    "SALES:CAPABILITY_PROOFS",
+    "SALES:CAMPAIGNS", "SALES:APPROACH_VERSIONS", "SALES:PARTICIPATIONS", "SALES:ENROLLMENTS",
+    "SALES:EXPOSURES", "SALES:MEETING_EPISODES", "SALES:REPLY_ATTRIBUTIONS", "SALES:GTM_COVERAGE",
+    "SALES:GTM_INPUT_REVISIONS", "SALES:GTM_SNAPSHOTS"
+  ],
+  "append_only_resources": [
+    "SALES:CAPABILITY_PROOFS",
+    "SALES:EXPOSURES", "SALES:REPLY_ATTRIBUTIONS", "SALES:GTM_COVERAGE",
+    "SALES:GTM_INPUT_REVISIONS", "SALES:GTM_SNAPSHOTS"
+  ],
+  "required_capability_completeness": {
+    "derivation": "fresh governing Sales contract plus every governing Operating Mode on each material SALES resume",
+    "proof_source": "append-only Capability Profile scoped to the exact runtime, principal, mode and competent source",
+    "accepted": ["READ_VERIFIED"],
+    "fail_closed": ["UNKNOWN", "HUMAN_AUTH_PENDING", "PARTIAL", "ERROR"],
+    "hold": "HOLD_REQUIRED_CAPABILITY_INCOMPLETE",
+    "seller_experience": "one plain-language action in the seller's own thread; no admin-relayed technical prompt; after competent-source verification the same durable gate resumes",
+    "optional": "reported but never creates the global capability HOLD",
+    "calendar": "native competent-source READ only; no create/update/delete and no FocusSession",
+    "gmail": "native competent-source READ/search only during onboarding; no send"
+  },
+  "versioned_identities": {
+    "metric_definitions": "gtm-metric-definitions/v1 plus a content digest, pinned by every snapshot",
+    "projection": "gtm-analysis-projection/v1",
+    "snapshot_identity": "gtm-snapshot-identity/v1 — the same definitions, the same input revision and the same metric/scope/period/cutoff/coverage identify the same snapshot; a backfill or a reclassification produces a new input revision and a new snapshot beside the old one"
+  },
+  "invariants_preserved": [
+    "exactly six tools; no tool is added, renamed or removed",
+    "the harness performs no Notion write: every physical write is rendered for the native Notion app",
+    "the harness has no Gmail send or Calendar write path; native competent-source reads are principal-scoped and none of the GTM resources is externally effective",
+    "TARGET and FINAL readback still gate every durable claim, and durable-state-dependent constraints are re-checked at verification so a native edit cannot be committed as a stale assumption",
+    "principal isolation: a GTM record may never name another rep or another runtime",
+    "governing versions are resolved from Notion at call time; a candidate never becomes governing by being registered",
+    "business values never reach an envelope, an evidence line or a log: comparisons are reported by redacted token",
+    "an event period is a half-open Europe/Paris CALENDAR week (167, 168 or 169 hours), never a fixed seven-day window"
+  ]
+}

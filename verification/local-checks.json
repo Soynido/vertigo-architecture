@@ -1,0 +1,216 @@
+{
+  "kind": "ISOLATED_REVIEW_CHECKS/1",
+  "prepared_on": "2026-11-09",
+  "environment": {
+    "node": "v26.8.1",
+    "credentials_removed": true,
+    "HARNESS_ENV": "fixture",
+    "production_calls": 0
+  },
+  "initial_install": {
+    "status": "FAILED",
+    "reason": "frozen lockfile autoInstallPeers mismatch without explicit config"
+  },
+  "frozen_install_with_existing_lock_settings": {
+    "status": "PASSED",
+    "downloaded_packages": 0,
+    "reused_packages": 110,
+    "lockfile_regenerated": false,
+    "lifecycle_scripts": false
+  },
+  "checks": [
+    {
+      "name": "typecheck",
+      "command": "pnpm typecheck",
+      "exit_code": 1,
+      "status": "FAILED",
+      "elapsed_seconds": 0.8,
+      "tap_counts": {},
+      "failure_titles_or_type_errors": [
+        "pnpm attempted dependency-manager reconciliation and aborted without a TTY; the compiler had not run."
+      ]
+    },
+    {
+      "name": "targeted_harness",
+      "command": "node --test packages/harness/test/unit/pv-native-sales-control.test.ts packages/harness/test/unit/pv-real-direction-control.test.ts packages/harness/test/unit/pv-real-direction-native-plan.test.ts packages/harness/test/unit/pv-real-direction-publication.test.ts packages/harness/test/unit/passive-sales-activity.test.ts packages/harness/test/unit/tool-trace.test.ts",
+      "exit_code": 0,
+      "status": "PASSED",
+      "elapsed_seconds": 6.74,
+      "tap_counts": {
+        "tests": 223,
+        "pass": 223,
+        "fail": 0,
+        "skipped": 0
+      },
+      "failure_titles_or_type_errors": []
+    },
+    {
+      "name": "targeted_plugin",
+      "command": "node --test packages/plugin/test/native-sales-bootstrap-content.test.mjs packages/plugin/test/native-sales-bootstrap-package.test.mjs",
+      "exit_code": 0,
+      "status": "PASSED",
+      "elapsed_seconds": 0.73,
+      "tap_counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 0
+      },
+      "failure_titles_or_type_errors": []
+    },
+    {
+      "name": "direct_typecheck_harness",
+      "command": "node packages/harness/node_modules/typescript/bin/tsc -p packages/harness/tsconfig.json --noEmit",
+      "exit_code": 0,
+      "status": "PASSED",
+      "note": "Direct compiler invocation; no package-manager reinstall."
+    },
+    {
+      "name": "direct_typecheck_mail-executor",
+      "command": "node packages/mail-executor/node_modules/typescript/bin/tsc -p packages/mail-executor/tsconfig.json --noEmit",
+      "exit_code": 0,
+      "status": "PASSED",
+      "note": "Direct compiler invocation; no package-manager reinstall."
+    },
+    {
+      "name": "full_harness",
+      "command": "node --test test/**/*.test.ts",
+      "working_directory": "packages/harness",
+      "status": "FAILED",
+      "exit_code": 1,
+      "elapsed_seconds": 23.29,
+      "tap_counts": {
+        "tests": 1784,
+        "pass": 1777,
+        "fail": 2,
+        "skipped": 5
+      },
+      "failure_titles_or_type_errors": [
+        "✖ PT-ARCH-002/a: src/, migrations/ and tests contain no current runtime-state constants (664.821541ms)",
+        "✖ W7.3-R1: only the Sales activation directory is writable; credential registries stay read-only (61.393625ms)",
+        "✖ failing tests:",
+        "✖ PT-ARCH-002/a: src/, migrations/ and tests contain no current runtime-state constants (664.821541ms)",
+        "✖ W7.3-R1: only the Sales activation directory is writable; credential registries stay read-only (61.393625ms)"
+      ]
+    },
+    {
+      "name": "full_plugin",
+      "command": "node --test test/*.test.mjs",
+      "working_directory": "packages/plugin",
+      "status": "FAILED",
+      "exit_code": 1,
+      "elapsed_seconds": 3.13,
+      "tap_counts": {
+        "tests": 92,
+        "pass": 74,
+        "fail": 18,
+        "skipped": 0
+      },
+      "failure_titles_or_type_errors": [
+        "✖ PT-DEPLOY-DOC-001: remote acceptance requires attestation, token revocation, app refresh and an ordinary-chat cold start without local MCP (1.926875ms)",
+        "✖ PT-PKG-006: no secret value ships in the package or docs (5.093625ms)",
+        "✖ PT-PKG-008: README opens with the whole installable product, both lanes, all five components and the protected email path (7.544375ms)",
+        "✖ PT-PKG-009: the archive is one plugin folder holding the manifest ChatGPT's uploader looks for (196.911417ms)",
+        "✖ PT-PKG-009/l: candidate follows the portable name/subtitle limits without changing LIVE presentation or prompts (99.757667ms)",
+        "✖ PT-PKG-009/m: preparation is a hash-bound, secret-free candidate, never a release claim (96.618917ms)",
+        "✖ PT-PKG-009/b: the scaffold manifest satisfies every rule OpenAI's own validator enforces (52.31225ms)",
+        "✖ PT-PKG-009/c: both layouts describe the same plugin and the same single remote MCP server (55.134583ms)",
+        "✖ PT-PKG-009/e: a tokenless endpoint produces one archive the whole team can install (58.049292ms)",
+        "✖ PT-PKG-009/q: a private candidate update preserves verified app bytes and both manifest bindings (60.712625ms)",
+        "✖ PT-PKG-009/s: registered-app-only private candidate has no bundled MCP or endpoint, but preserves its skill and app (60.131791ms)",
+        "✖ PT-PKG-009/u: native candidate preparation hashes four secret-free files without claiming member access (105.040625ms)",
+        "✖ PT-PKG-009/f: an archive that still embeds a token says so, loudly, because it belongs to one person (57.813417ms)",
+        "✖ PT-PKG-009/d: the shipped skill is the repository's, with the frontmatter the format needs and no endpoint token (59.395375ms)",
+        "✖ PT-PKG-009/g: --candidate ships the skill the candidate server serves, byte for byte, under one MCP server (57.805375ms)",
+        "✖ PT-PKG-009/h: the candidate manifest describes five tools and backend writes; the LIVE default stays read-only (59.499458ms)",
+        "✖ PT-PKG-009/i: the archive version is strictly greater than the installed one (60.445541ms)",
+        "✖ PT-PRO-007/c: exactly one LIVE SKILL.md and one SKILL.candidate.md exist, the build copies no Markdown, and src and dist serve the same candidate (18.827375ms)",
+        "✖ failing tests:",
+        "✖ PT-DEPLOY-DOC-001: remote acceptance requires attestation, token revocation, app refresh and an ordinary-chat cold start without local MCP (1.926875ms)",
+        "✖ PT-PKG-006: no secret value ships in the package or docs (5.093625ms)",
+        "✖ PT-PKG-008: README opens with the whole installable product, both lanes, all five components and the protected email path (7.544375ms)",
+        "✖ PT-PKG-009: the archive is one plugin folder holding the manifest ChatGPT's uploader looks for (196.911417ms)",
+        "✖ PT-PKG-009/l: candidate follows the portable name/subtitle limits without changing LIVE presentation or prompts (99.757667ms)"
+      ]
+    },
+    {
+      "name": "full_mail_executor",
+      "command": "node --test test/**/*.test.ts",
+      "working_directory": "packages/mail-executor",
+      "status": "PASSED",
+      "exit_code": 0,
+      "elapsed_seconds": 0.35,
+      "tap_counts": {
+        "tests": 18,
+        "pass": 17,
+        "fail": 0,
+        "skipped": 1
+      },
+      "failure_titles_or_type_errors": []
+    },
+    {
+      "name": "snapshot_architecture_recheck",
+      "command": "node --test test/arch/pt-arch-002.no-current-state.test.ts test/unit/pt-deploy-001-004.attestation-token-rotation.test.ts",
+      "working_directory": "packages/harness",
+      "status": "PASSED",
+      "exit_code": 0,
+      "elapsed_seconds": 0.53,
+      "tap_counts": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "skipped": 0
+      },
+      "failure_titles_or_type_errors": [],
+      "reason_for_recheck": "New local Git repository initialized, historical reference paths restored, and anonymized collaborator aliases separated from synthetic fixture names."
+    },
+    {
+      "name": "snapshot_core_recheck",
+      "command": "node --test test/unit/pv-native-sales-control.test.ts test/unit/pv-real-direction-control.test.ts test/unit/pv-real-direction-native-plan.test.ts test/unit/pv-real-direction-publication.test.ts test/unit/passive-sales-activity.test.ts test/unit/tool-trace.test.ts",
+      "working_directory": "packages/harness",
+      "status": "PASSED",
+      "exit_code": 0,
+      "elapsed_seconds": 6.41,
+      "tap_counts": {
+        "tests": 223,
+        "pass": 223,
+        "fail": 0,
+        "skipped": 0
+      },
+      "failure_titles_or_type_errors": [],
+      "reason_for_recheck": "New local Git repository initialized, historical reference paths restored, and anonymized collaborator aliases separated from synthetic fixture names."
+    },
+    {
+      "name": "snapshot_plugin_recheck",
+      "command": "node --test test/*.test.mjs",
+      "working_directory": "packages/plugin",
+      "status": "FAILED",
+      "exit_code": 1,
+      "elapsed_seconds": 4.12,
+      "tap_counts": {
+        "tests": 92,
+        "pass": 89,
+        "fail": 3,
+        "skipped": 0
+      },
+      "failure_titles_or_type_errors": [
+        "✖ PT-PKG-008: README opens with the whole installable product, both lanes, all five components and the protected email path",
+        "✖ PT-PKG-009/i: the archive version is strictly greater than the installed one",
+        "✖ PT-PRO-007/c: exactly one LIVE SKILL.md and one SKILL.candidate.md exist, the build copies no Markdown, and src and dist serve the same candidate"
+      ],
+      "reason_for_recheck": "New local Git repository initialized, historical reference paths restored, and anonymized collaborator aliases separated from synthetic fixture names."
+    },
+    {
+      "name": "build_harness",
+      "status": "PASSED",
+      "command": "node packages/harness/node_modules/typescript/bin/tsc -p packages/harness/tsconfig.build.json",
+      "exit_code": 0
+    },
+    {
+      "name": "build_mail_executor",
+      "status": "PASSED",
+      "command": "node packages/mail-executor/node_modules/typescript/bin/tsc -p packages/mail-executor/tsconfig.build.json",
+      "exit_code": 0
+    }
+  ]
+}

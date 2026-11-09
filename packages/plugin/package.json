@@ -1,0 +1,15 @@
+{
+  "name": "@vertigo/plugin",
+  "version": "0.3.0",
+  "private": true,
+  "description": "VERTIGO OS Plugin package: governing 0.3 manifest + guarded candidate skill. Exposes exactly six tools through a Notion-read-only harness; backend transaction state and verified runtime-registry activation remain server-side, while physical Notion writes use the native Notion app.",
+  "scripts": {
+    "build": "node -e \"const m=JSON.parse(require('fs').readFileSync('manifest.json','utf8')); if (m.tools.length!==6) throw new Error('six tools'); console.log('manifest ok')\"",
+    "typecheck": "echo 'no typescript in plugin package'",
+    "test": "node --test 'test/*.test.mjs'",
+    "archive": "node scripts/build-archive.mjs"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "VERTIGO OS",
+  "version": "0.3.0",
+  "spec": "PLUGIN_SPEC/0.3.0",
+  "description": "Operate VERTIGO META OS or your Personal SALES OS from an ordinary ChatGPT chat. Notion stays the durable truth; physical Notion writes go through your native Notion app; every durable change is independently verified; automated emails execute only through the deterministic Mail Executor.",
+  "tools": ["os_bind", "os_resume", "os_prepare", "os_verify", "os_handoff", "os_control_status"],
+  "harness": {
+    "package": "@vertigo/harness",
+    "entry": "packages/harness/src/index.ts",
+    "transports": { "stdio": "local development (HARNESS_TRANSPORT=stdio, principal from HARNESS_PRINCIPAL_ID)", "http": "remote MCP endpoint POST /mcp (HARNESS_TRANSPORT=http, bearer token → principal via HARNESS_HTTP_TOKENS_FILE)" },
+    "notion_access": "read-only",
+    "gmail_access": "none",
+    "side_effects": "backend transaction mechanics only (bindings, plans, receipts, leases in the harness store); no Notion write, no email",
+    "caller_authority_inputs": "none — roots, runtime ids, owners, gates, versions, verdicts and baselines are backend-derived"
+  },
+  "dependencies": {
+    "native_notion_app": { "required": true, "role": "performs every physical Notion write (stage-1, finalization, State/Manifest LAST) exactly as rendered by os_prepare", "permissions": ["read pages and databases of the bound runtime", "create pages in the runtime control-plane databases", "update page properties"] },
+    "native_gmail": { "required_for": ["SALES READ_RECONCILE", "SALES EXTERNAL_ACTION_TEST", "SALES DRAFT_THEN_HUMAN_SEND"], "role": "competent source for mailbox/thread/effect reality (read/reconcile); native send only inside the owner-approved EXTERNAL_ACTION_TEST scope or by a human in DRAFT_THEN_HUMAN_SEND", "permissions": ["read mail / search sent and threads", "send mail (approved test scope / human-performed only)"] },
+    "mail_executor": { "package": "@vertigo/mail-executor", "required_for": ["SALES PROTECTED_AUTOMATED_SEND"], "invocation": "pnpm --filter @vertigo/mail-executor execute -- --intent-ref <ref> --action-key <key>", "inputs": "immutable references only; recipient, content, mode and overrides are refused", "credential": "MAIL_EXECUTOR_GMAIL_ACCESS_TOKEN in the executor environment only" },
+    "work_or_codex_runtime": { "required": false }
+  },
+  "execution_modes": {
+    "READ_RECONCILE": ["harness", "native_notion_read", "native_gmail_read"],
+    "DRAFT_THEN_HUMAN_SEND": ["harness", "native_notion_app", "native_gmail_read"],
+    "EXTERNAL_ACTION_TEST": ["harness", "native_notion_app", "native_gmail_read", "native_gmail_send_in_approved_scope"],
+    "PROTECTED_AUTOMATED_SEND": ["harness", "native_notion_app", "native_gmail_read", "mail_executor"]
+  },
+  "safe_fallbacks": {
+    "no_native_notion": "read-only: os_bind, os_resume, os_handoff, os_control_status; no durable change is claimed",
+    "no_gmail": "no send, no replay, no completion of an unresolved email intent; internal Notion planning may continue if safe",
+    "no_mail_executor": "PROTECTED_AUTOMATED_SEND is ineligible (HOLD_EXECUTOR_REQUIRED); use DRAFT_THEN_HUMAN_SEND",
+    "no_notion": "no automated send whose authority/intent/safety state depends on durable state; Gmail may be inspected for recovery evidence only"
+  },
+  "docs": { "install": "docs/INSTALL.md", "skill": "SKILL.md", "wake_preflight": "wake/preflight.mjs", "configuration": "../../docs/CONFIGURATION.md", "mail_executor_runbook": "../mail-executor/README.md" }
+}

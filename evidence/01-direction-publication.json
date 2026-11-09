@@ -1,0 +1,23 @@
+{
+  "kind": "ANONYMIZED_RECEIPT_DERIVATIVE/1",
+  "evidence_id": "01-direction-publication",
+  "prepared_on": "2026-11-09",
+  "source_observed_at": "2026-10-16T20:31:48.660Z",
+  "evidence_level": "OPERATOR_SOURCE_READBACK",
+  "source_status": "REAL_PUBLISHED_AND_OWNER_FRESH_RESUMED_PRIVATE_RECIPIENT_UNPROVED",
+  "source_sha256": "8bb72dd7394478a4ea2299392750563b9d696017baddfcbc423ff341a24b2a5f",
+  "claims_within_source_scope": [
+    "Publication réelle rapportée par le reçu opérateur ; reprise côté propriétaire observée.",
+    "Le contrôle du profil destinataire était une observation opérateur, pas un chat privé.",
+    "Le reçu de réception privé restait non prouvé."
+  ],
+  "anonymization": {
+    "free_text_payloads_included": false,
+    "private_ids_urls_names_signatures_excluded": true,
+    "source_signatures_validate_this_derivative": false
+  },
+  "limits": [
+    "Historical receipt selected by the operator; underlying private observations are not independently replayed by this repository.",
+    "This derivative is not a new test, client event or production acceptance."
+  ]
+}

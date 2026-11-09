@@ -1,0 +1,35 @@
+{
+  "kind": "ANONYMIZED_RECEIPT_DERIVATIVE/1",
+  "evidence_id": "03-admin-recovery",
+  "prepared_on": "2026-11-09",
+  "source_observed_at": "2026-10-16T11:04:30.551Z",
+  "evidence_level": "OPERATOR_SOURCE_READBACK",
+  "source_status": "ADMIN_RECOVERY_VERIFIED_AND_SERVER_GUIDANCE_SERVED_NOT_H5_PASS",
+  "source_sha256": "39dba0e65ea1d1f39221ab0b27221b61d6d76bf54f91333f7af15e29e2412cff",
+  "claims_within_source_scope": [
+    "Réparation administrative rapportée comme relue et vérifiée.",
+    "Les règles et l’historique métier ne sont pas requalifiés rétroactivement.",
+    "Cette opération ne constitue pas un PASS global de production."
+  ],
+  "anonymization": {
+    "free_text_payloads_included": false,
+    "private_ids_urls_names_signatures_excluded": true,
+    "source_signatures_validate_this_derivative": false
+  },
+  "limits": [
+    "Historical receipt selected by the operator; underlying private observations are not independently replayed by this repository.",
+    "This derivative is not a new test, client event or production acceptance."
+  ],
+  "selected_facts": {
+    "status": "COMPLETED",
+    "mutations": 6,
+    "verified": 6,
+    "original_error_history_retained": true,
+    "original_barrier_retroactively_certified": false,
+    "approved_authority_rules_replayed": false,
+    "authority_rows_before_after_equal": true,
+    "state_gate_status": "OPEN",
+    "mode": "LEARN",
+    "b7_pass_claimed": false
+  }
+}

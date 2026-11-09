@@ -1,0 +1,11 @@
+{
+  "kind": "OWNER_REPORTED_USAGE/1",
+  "prepared_on": "2026-11-09",
+  "reported_usage": "Le propriétaire rapporte avoir vu une reprise « on reprend ? » suivie d’une organisation et d’une priorisation du travail ; il rapporte également des reprises en chat neuf.",
+  "independent_private_account_trace_included": false,
+  "claim": "USAGE_REPORTED_NOT_INDEPENDENTLY_REVALIDATED",
+  "limits": [
+    "No private prompt, answer, reasoning trace or account activity is reconstructed.",
+    "This statement is not an E2E test executed for this dossier."
+  ]
+}

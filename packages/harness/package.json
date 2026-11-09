@@ -1,0 +1,28 @@
+{
+  "name": "@vertigo/harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VERTIGO OS Plugin V0 — read-only harness backend exposing the six frozen primitives.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test 'test/**/*.test.ts'",
+    "test:arch": "node --test 'test/arch/*.test.ts'",
+    "fixture:pt-cp-009": "node test/support/pt-cp-009-fixture.ts",
+    "dev": "node --env-file=../../.env src/index.ts",
+    "token": "node src/cli/token.ts",
+    "guard:approve": "node src/cli/guard-approve.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "pg": "^8.16.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.0",
+    "typescript": "^5.9.0"
+  }
+}

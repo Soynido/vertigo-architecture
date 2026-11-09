@@ -1,0 +1,85 @@
+# VERTIGO harness — always-on deployment.
+#
+# Three services and nothing else: the harness, its Postgres, and Caddy for a real certificate. The point of
+# moving off the laptop is that a sleeping machine silently removes the whole governance layer and ChatGPT
+# answers anyway (ticket PV-FAILOPEN-001). Everything here restarts by itself, including after a host reboot.
+services:
+  db:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: vertigo_harness
+      POSTGRES_USER: vertigo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in deploy/.env}
+    volumes:
+      - db:/var/lib/postgresql/data
+      # Applied once, on an empty data directory only. A restore of the laptop dump goes here too.
+      - ../packages/harness/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vertigo -d vertigo_harness"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  harness:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      args:
+        HARNESS_BUILD_REVISION: ${HARNESS_BUILD_REVISION:-UNKNOWN}
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # `live` against the live workspace (canonical name since W3.5a; `live_readonly` is still accepted for one
+      # release). The candidate code base contains the backend transactional Notion writer (PV-WRITE-001), so this
+      # name no longer promises read-only; this file changes names only and wires nothing new. `fixture` would be a
+      # different product.
+      HARNESS_ENV: live
+      DATABASE_URL: postgres://vertigo:${POSTGRES_PASSWORD}@db:5432/vertigo_harness
+      # NOTION_TOKEN is canonical; NOTION_READ_TOKEN is passed through for one release so an existing deploy/.env
+      # keeps working. Both are forwarded verbatim: the harness refuses to start if neither is set or if both are
+      # set and differ, rather than choosing the Notion authority here. deploy.sh checks the same before starting.
+      NOTION_TOKEN: ${NOTION_TOKEN:-}
+      NOTION_READ_TOKEN: ${NOTION_READ_TOKEN:-}
+      VERTIGO_META_SPEC_ROOT: ${VERTIGO_META_SPEC_ROOT:?the harness refuses to start without its SPEC_ROOT pointer}
+      HARNESS_HTTP_TOKENS_FILE: /app/config/http-tokens.local.json
+      PRINCIPALS_FILE: /app/config/principals.local.json
+      SALES_RUNTIME_REGISTRY_FILE: /app/runtime-state/sales-runtimes.local.json
+      HARNESS_SKILL_FILE: /app/packages/plugin/SKILL.candidate.md
+      HARNESS_CONFIG_FINGERPRINT: ${HARNESS_CONFIG_FINGERPRINT:-UNSET}
+      # Private readonly META status pilot: one exact authenticated principal, no new write permission.
+      HARNESS_META_RECOVERY_STATUS_PRINCIPALS: ${HARNESS_META_RECOVERY_STATUS_PRINCIPALS:-[]}
+      # true keeps the /mcp/<token> fallback, which ChatGPT still needs: it offers OAuth or nothing, and cannot
+      # present a static API key. Set false the day the endpoint speaks OAuth (PV-CRED-001).
+      HARNESS_ALLOW_PATH_TOKEN: ${HARNESS_ALLOW_PATH_TOKEN:-true}
+    volumes:
+      # The registries are MOUNTED, not baked into the image, so minting or rotating a seller's credential takes
+      # effect on the next request without a rebuild — which is what the token command promises. Read-only: the
+      # harness must never be able to rewrite the credentials it authenticates against.
+      - ../config:/app/config:ro
+      # Activation uses mkdir + fsync + rename. A writable file-only mount cannot support that CAS;
+      # give only the Sales state file its own directory, never the credentials directory.
+      - ../config/runtime-state:/app/runtime-state:rw
+    expose:
+      - "8787"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: always
+    depends_on: [harness]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      HARNESS_DOMAIN: ${HARNESS_DOMAIN:?set HARNESS_DOMAIN in deploy/.env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  db:
+  caddy_data:
+  caddy_config:

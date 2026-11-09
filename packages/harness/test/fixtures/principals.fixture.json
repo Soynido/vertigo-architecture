@@ -1,0 +1,8 @@
+{
+  "principals": [
+    { "principal_id": "p-meta-owner", "display_name": "Fixture Owner", "status": "ACTIVE", "allowed_projects": ["VERTIGO"], "allowed_lanes": ["META", "SALES"], "rep_identity_key": "rep-owner", "meta_authority": "COMPANY_OWNER" },
+    { "principal_id": "p-rep-a", "display_name": "Fixture Rep A", "status": "ACTIVE", "allowed_projects": ["VERTIGO"], "allowed_lanes": ["SALES"], "rep_identity_key": "rep-a" },
+    { "principal_id": "p-rep-b", "display_name": "Fixture Rep B", "status": "ACTIVE", "allowed_projects": ["VERTIGO"], "allowed_lanes": ["SALES"], "rep_identity_key": "rep-b" },
+    { "principal_id": "p-suspended", "display_name": "Fixture Suspended", "status": "SUSPENDED", "allowed_projects": ["VERTIGO"], "allowed_lanes": ["SALES"] }
+  ]
+}
