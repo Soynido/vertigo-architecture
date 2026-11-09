@@ -28,3 +28,7 @@ le dossier n’importe pas le journal de travail complet.
 Le contrôle privé compare les fichiers aux valeurs confidentielles connues sans
 exporter ces valeurs. Le contrôle public recherche aussi des motifs sensibles,
 les liens cassés et les incohérences de l’exemple.
+
+Le propriétaire conserve ses modifications et ses signatures GitHub dans l’historique.
+Les contrôles d’anonymisation visent les données des collaborateurs, les accès et
+les preuves copiées ; ils ne réécrivent pas ses signatures de compte.

@@ -5150,8 +5150,10 @@
       "source_revision": "fad1d38e1577956ed094baa3941c3d3fa90bb67c",
       "capture_state": "HEAD_IDENTICAL",
       "source_sha256": "81528ec6469468516b4961557d078f794ed04b6ee7c089d13e9493ef94b8db7e",
-      "snapshot_sha256": "81528ec6469468516b4961557d078f794ed04b6ee7c089d13e9493ef94b8db7e",
-      "transformations": [],
+      "snapshot_sha256": "d0b63f4956c926b38abc3ca13ac6ae90af8dce9a30d6748ec8bf06e74735a1bb",
+      "transformations": [
+        "compose_required_variable_error_message_removed_in_review_copy"
+      ],
       "source_mode": "0o644",
       "snapshot_mode": "0o644"
     },

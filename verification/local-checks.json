@@ -211,6 +211,20 @@
       "status": "PASSED",
       "command": "node packages/mail-executor/node_modules/typescript/bin/tsc -p packages/mail-executor/tsconfig.build.json",
       "exit_code": 0
+    },
+    {
+      "name": "scanner_classification_regression",
+      "command": "python3 -m unittest discover -s audit -p 'test_*.py'",
+      "status": "PASSED",
+      "exit_code": 0,
+      "tests": 13
+    },
+    {
+      "name": "compose_yaml_reference",
+      "command": "Ruby YAML parser; required nonempty environment reference asserted",
+      "status": "PASSED",
+      "exit_code": 0,
+      "docker_cli_available": false
     }
   ]
 }

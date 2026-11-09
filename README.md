@@ -3,6 +3,51 @@
 **Revue technique privée · 9 novembre 2026.**
 Tout se lit ici, sans installer de plugin, connecter Notion ou fournir une clé.
 
+## Le système en un coup d’œil
+
+**L’équipe ne code pas.** Après la mise en place du plugin et de ses connexions,
+chaque collaborateur travaille dans son ChatGPT : il demande de reprendre un
+dossier, préparer un message ou organiser sa journée. Le manager utilise le même
+principe pour piloter le META OS.
+
+**Le parcours quotidien utilise leurs abonnements existants.** Le modèle travaille
+dans ChatGPT ; le harness n’appelle pas d’API de modèle payante en supplément.
+Les quotas et les accès des comptes restent applicables. Les abonnements aux
+outils, l’hébergement du serveur et sa maintenance restent des coûts à distinguer.
+
+```mermaid
+flowchart TB
+ M[Manager : donne le cap et valide] --> C[ChatGPT individuel : abonnement existant]
+ U[Collaborateur : travaille en conversation] --> C
+ P[PLUGIN : compétences et méthode de travail] --> C
+ C <--> T[CONNEXIONS DU COMPTE : Notion, Gmail, Calendar, Web, fichiers]
+ C <--> H[HARNESS : identité, cibles autorisées, contrôles et reçus]
+ T <--> N[NOTION : sources accessibles selon les droits du compte]
+ N --> META[META OS : cap, décisions et orientations du manager]
+ N --> SALES[SALES OS : contexte, règles et dossiers de chacun]
+ H -. relectures ciblées .-> N
+ SALES -. mémoire relue lors de la reprise .-> C
+ classDef chat fill:#e1e9d2,stroke:#245b47,color:#172a24
+ classDef control fill:#e1e8fc,stroke:#3158d9,color:#172a24
+ classDef memory fill:#f0e9cf,stroke:#647169,color:#172a24
+ class C,P chat
+ class H control
+ class N,META,SALES memory
+```
+
+| Élément | Son rôle dans le travail quotidien |
+|---|---|
+| **META OS** | Le manager consulte le contexte de l’entreprise et prépare les orientations destinées à l’équipe. |
+| **SALES OS** | Chaque commercial retrouve ses dossiers, son contexte et ses règles. |
+| **PLUGIN** | Il apporte à l’agent les compétences et les étapes à suivre. |
+| **HARNESS** | Le serveur applique ses contrôles codés aux appels qu’il reçoit. |
+| **CONNEXIONS** | L’agent utilise les outils du compte, avec leurs droits et validations. |
+| **PERSISTANCE** | L’agent fait enregistrer le travail autorisé dans Notion, puis le relit. Cette mémoire permet de reprendre dans une autre conversation. |
+
+La conversation sert à demander et décider. Notion conserve les enregistrements.
+Le harness vérifie les champs et protocoles qu’il prend en charge ; il ne voit pas
+tous les gestes réalisés dans les outils natifs.
+
 ## Le problème rencontré
 
 Je développais les sites web des client de l'agence web Vertigo. Je disposais de mon propre espace de travail sur Notion et structurait le knowledge par projet (client, audit site web, remontées des informations, structuration de la doc technique, priorisation, validation, état d'avancement, livraison, maintenance, etc). 
@@ -16,18 +61,6 @@ La construction a suivi ce besoin : **conserver le contexte dans Notion → cont
 les enregistrements → guider leurs propres agents via ChatGPT avec des compétences → organiser les rôles
 META (admin) /SALES (ops) → rendre ce parcours accessible dans le chat habituel.**
 Ces couches expliquent les choix ; ce n’est pas une chronologie datée de chaque commit.
-
-```mermaid
-flowchart LR
- U[Collaborateur : « On reprend ? »] --> P[Plugin : consignes et accès MCP]
- P --> A[Agent : interprète et prépare]
- A <--> T[Connecteurs natifs du compte]
- T <--> N[Notion : mémoire OS]
- A <--> H[Harness : contrôles codés]
- H -. relectures ciblées .-> N
- N --> M[META : cap et orientations validées]
- N --> S[SALES : contexte et travail de chacun]
-```
 
 **OS** : organisation de données, règles et mémoire dans Notion.
 **Plugin** : compétences et connexion aux contrôles, pas un modèle entraîné.

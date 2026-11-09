@@ -1,6 +1,6 @@
 {
   "kind": "DOSSIER_READ_ONLY_AUDIT/1",
-  "files_scanned": 492,
+  "files_scanned": 498,
   "source_files_checked": 452,
   "issues": [],
   "passed": true

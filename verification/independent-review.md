@@ -34,3 +34,15 @@ exhaustif du code ou de l’anonymisation, ni une certification du produit insta
 La tentative Claude Max a échoué avant toute lecture par le modèle : session
 OAuth expirée, zéro token d’entrée, de cache et de sortie indiqué. Elle n’a produit
 aucun avis. Le préparateur n’a utilisé aucune API payante de secours.
+
+## Relecture après les demandes suivantes
+
+Le même agent Codex a relu l’ajout de la vue d’ensemble et les coûts dans le README,
+la correction du message Compose et le contrôle Gitleaks complémentaire. Il a
+confirmé le classement des six identifiants symboliques comme des valeurs sans
+rôle d’authentification.
+
+Il a demandé de bloquer le contrôle si le scanner échoue ou ne fournit pas son
+rapport. Le préparateur a ajouté un code de sortie dédié aux détections, exigé un
+rapport JSON valide et couvert ces cas par des tests. Le relecteur a rendu le
+verdict **APPROVE** sur ces changements.

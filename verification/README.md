@@ -18,3 +18,6 @@ de l’ancien dépôt qui restent en échec. Le [rapport local](local-checks.jso
 conserve les commandes, codes de sortie et compteurs de chaque passage.
 La [revue indépendante](independent-review.md) porte sur documentation et anonymisation.
 Les contrôles ne certifient ni la production ni un compte privé ChatGPT.
+
+Après l’alerte GitGuardian : [analyse et correction](GITGUARDIAN-20261109.md),
+[scan standard complémentaire](secret-scan.json).

@@ -10,7 +10,7 @@ services:
     environment:
       POSTGRES_DB: vertigo_harness
       POSTGRES_USER: vertigo
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in deploy/.env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
     volumes:
       - db:/var/lib/postgresql/data
       # Applied once, on an empty data directory only. A restore of the laptop dump goes here too.
