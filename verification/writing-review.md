@@ -26,3 +26,7 @@ quatre sections dépliables.
 
 La relecture a retiré le scénario inventé du premier brouillon avant publication.
 Elle a conservé les dates, les incertitudes et les auteurs des événements réels.
+
+Le README reprend les illustrations et les résultats à l’entrée du dépôt, avec
+l’utilité à côté de chaque cas. Les preuves restent proches des affirmations.
+Le récit rédigé par le propriétaire sur le problème initial reste intact.

@@ -3,10 +3,10 @@
   "prepared_on": "2026-11-09",
   "source_head": "fad1d38e1577956ed094baa3941c3d3fa90bb67c",
   "reviewer": "INDEPENDENT_CODEX_READ_ONLY",
-  "review_result": "APPROVE_FOR_CTO_READING_DOSSIER_WITH_REAL_OPERATIONAL_CASES",
-  "preserves_owner_readme_edits_through_commit": "1d0ec8b3c21f208e69585e0001eb63c6aa81baa5",
+  "review_result": "APPROVE_FOR_CTO_READING_DOSSIER_WITH_REAL_CASES_VISIBLE_IN_README",
+  "preserves_owner_readme_edits_through_commit": "d28311118328c46b2217fdd50b1874e423aa15c4",
   "self_excluded_from_hash_list": true,
-  "file_count": 504,
+  "file_count": 505,
   "files": [
     {
       "path": ".dockerignore",
@@ -35,8 +35,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "0b8371c1ce9052874987a4c5fce5ae08b7cff80e75be909cd60045dd549e3124",
-      "bytes": 7649
+      "sha256": "375b568ba9771510d97b467b30bf2323a522b23b614ed10b6efc65e99d0a1e85",
+      "bytes": 12585
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -2395,8 +2395,8 @@
     },
     {
       "path": "provenance/README.md",
-      "sha256": "ec3cd2441b326f1b47978dcf615d16fd9fce36f38e887729c9b5953dad6708a1",
-      "bytes": 2448
+      "sha256": "95112c4be9dbd2fea83dd8bd9eb8e6d2c147787fed657d6d64546d97bad55331",
+      "bytes": 2459
     },
     {
       "path": "provenance/source-manifest.json",
@@ -2470,8 +2470,8 @@
     },
     {
       "path": "verification/README.md",
-      "sha256": "0e14c07c270373dbfe8f2a3af2f291997f8ba8cf98a2b1de70b398fb1d908120",
-      "bytes": 1773
+      "sha256": "31857043bf54a17ecf0c2e3273eba95a04b2584d27a3ef0fa1e7771b3ca0585a",
+      "bytes": 1938
     },
     {
       "path": "verification/RESULTS.md",
@@ -2485,13 +2485,13 @@
     },
     {
       "path": "verification/dossier-audit.json",
-      "sha256": "4567a761f1311f923d2bcb7d8af60957cf7dcd9eb0b1b5880113a9ee0a29c86b",
+      "sha256": "19bb18cf51e65f54b3e15da5ecd1e4a0985055564d43cfadce9e56a5a5d34566",
       "bytes": 131
     },
     {
       "path": "verification/independent-review.md",
-      "sha256": "480c8ccead911ccda63db6cda6ec6cf7e1771d90f51503574b0aeae3fd35bbd2",
-      "bytes": 3087
+      "sha256": "e5b48d1602f68c8f3be14bc752f5d1d3127bce765c77b075449bef5b589983e0",
+      "bytes": 3527
     },
     {
       "path": "verification/local-checks.json",
@@ -2505,8 +2505,13 @@
     },
     {
       "path": "verification/private-value-check.json",
-      "sha256": "ce79d4ea25b782189fd1601d4b5889764e19a3755d2a4a0912c445523895ebd2",
+      "sha256": "d613612ad3957d5bbeab2b2302b9a73957bb6b2107bfec85d2b24c1da22d579e",
       "bytes": 366
+    },
+    {
+      "path": "verification/readme-operational-entry.json",
+      "sha256": "26bb1d8de432a8eb45cb2a8b08853371faa74d1e45b3b37bf2b3d7664ff004e4",
+      "bytes": 883
     },
     {
       "path": "verification/secret-scan-history.json",
@@ -2525,8 +2530,8 @@
     },
     {
       "path": "verification/writing-review.md",
-      "sha256": "7fa73adff3831b7866a19a48b74a5dbd43a02974d7ee3afff1126e54575639a2",
-      "bytes": 1596
+      "sha256": "1ecaa8bab0019601bbc072c19c85f02e74078a37dd16a6bb97cf21e0225ec60b",
+      "bytes": 1846
     }
   ]
 }

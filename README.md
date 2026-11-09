@@ -3,40 +3,83 @@
 **Revue technique privée · 9 novembre 2026.**
 Tout se lit ici, sans installer de plugin, connecter Notion ou fournir une clé.
 
-**[Voir l’équipe au travail](docs/UTILISER-VERTIGO.md)** : des cas réels illustrés,
-les demandes dans le chat, les résultats et leur utilité, avec les liens vers les preuves.
-
-## Le système en un coup d’œil
-
-**L’équipe ne code pas.** Après la mise en place du plugin et de ses connexions,
-chaque collaborateur travaille dans son ChatGPT : il demande de reprendre un
-dossier, préparer un message ou organiser sa journée. Le manager utilise le même
-principe pour piloter le META OS.
+**Célia pilote depuis le META OS. Aron et Julian travaillent dans leurs SALES OS.**
+Après la configuration du plugin et des connexions, chacun utilise son propre
+ChatGPT : reprendre un dossier, préparer un message ou organiser la journée.
+**L’équipe ne code pas.**
 
 **Le parcours quotidien utilise leurs abonnements existants.** Le modèle travaille
 dans ChatGPT ; le harness n’appelle pas d’API de modèle payante en supplément.
 Les quotas et les accès des comptes restent applicables. Les abonnements aux
 outils, l’hébergement du serveur et sa maintenance restent des coûts à distinguer.
 
-```mermaid
-flowchart TB
- M[Manager : donne le cap et valide] --> C[ChatGPT individuel : abonnement existant]
- U[Collaborateur : travaille en conversation] --> C
- P[PLUGIN : compétences et méthode de travail] --> C
- C <--> T[CONNEXIONS DU COMPTE : Notion, Gmail, Calendar, Web, fichiers]
- C <--> H[HARNESS : identité, cibles autorisées, contrôles et reçus]
- T <--> N[NOTION : sources accessibles selon les droits du compte]
- N --> META[META OS : cap, décisions et orientations du manager]
- N --> SALES[SALES OS : contexte, règles et dossiers de chacun]
- H -. relectures ciblées .-> N
- SALES -. mémoire relue lors de la reprise .-> C
- classDef chat fill:#e1e9d2,stroke:#245b47,color:#172a24
- classDef control fill:#e1e8fc,stroke:#3158d9,color:#172a24
- classDef memory fill:#f0e9cf,stroke:#647169,color:#172a24
- class C,P chat
- class H control
- class N,META,SALES memory
-```
+## Célia manager : coordonner le travail de l’équipe
+
+![Célia manager dans le META OS, Aron et Julian dans leurs SALES OS. Répartition réelle des 73 prospects : 25 pour Aron, 27 pour Célia, 21 pour Julian.](docs/illustrations/equipe.svg)
+
+| Cas réel | Résultat disponible | Pourquoi c’est utile |
+|---|---|---|
+| **Répartir la prospection.** L’équipe décide des lots et le propriétaire transmet la répartition. | L’orientation de Julian, version 2, porte les rangs **53 à 73**, soit **21 prospects**, pour les 26–27 octobre. Aron a les rangs 1–25, Célia les rangs 26–52. | Julian retrouve son lot dans son OS sans devoir ouvrir celui d’Aron. L’équipe peut vérifier le périmètre décidé avant une prise de contact. |
+| **Conserver les contrôles existants.** L’orientation demande de vérifier responsable, historique, doublons et refus. | Le document contient le lot et ses conditions ; il conserve les suivis, règles et autorisations locales. | La répartition ne remplace pas les contrôles et ne réattribue pas une fiche à l’aveugle. |
+
+**Source :** [orientation réellement consultée dans Notion](evidence/07-notion-operational-artifacts.json).
+Célia est la manager présentée ici et figure aussi dans la répartition commerciale
+historique. La décision vient de l’équipe ; les pièces gardent leurs auteurs et
+ne lui attribuent pas les publications de l’opérateur. La présence du document
+ne prouve ni sa consommation dans le chat ni les contacts réalisés.
+
+## Le Daily GO : reprendre et recevoir une priorité expliquée
+
+![Daily GO : Julian demande « on reprends ? ». Le propriétaire rapporte la reprise, l’organisation et la priorisation du travail. La réponse privée n’est pas reconstituée.](docs/illustrations/daily-go.svg)
+
+| Demande et résultat | Pourquoi c’est utile |
+|---|---|
+| Le propriétaire rapporte avoir vu Julian demander **« on reprends ? »**, puis recevoir une organisation et une priorisation du travail. Il rapporte aussi les reprises en chat neuf des collaborateurs. | Reprendre sans redonner tout le contexte ni reconstituer l’historique du dossier. |
+| La compétence demande de relire le cap applicable, les engagements, les dossiers et les méthodes, puis de **préparer un résultat exploitable**. | Recevoir une aide liée au travail en cours, avec une raison pour la priorité proposée. |
+
+Le modèle analyse et rédige ; l’utilisateur garde les décisions et engagements
+qui lui appartiennent. Le harness contrôle les appels reçus. Le Daily GO ne
+lance pas un travail en arrière-plan et ne calcule pas de quotas inventés.
+
+**Appuis :** [usage rapporté par le propriétaire](evidence/06-owner-reported-daily-go.json),
+[complément d’usage](evidence/08-owner-reported-operational-usage.json),
+[compétence Daily GO](skills/pilot-snapshot/vertigo-adaptive-coach/SKILL.md).
+Le récit du propriétaire décrit l’usage observé ; ce dépôt ne contient pas la
+réponse privée de Julian ni une nouvelle trace indépendante de cette reprise.
+
+## Les autres résultats concrets
+
+| Cas réel | Résultat visible dans les sources | Pourquoi c’est utile |
+|---|---|---|
+| **Aron fait évoluer sa méthode.** | Trois pages du 20 octobre sont présentes et liées depuis son playbook : **audit UX/SEO et contenus existants**, **contrôle du français**, **carrousel narratif personnalisé**. Le propriétaire rapporte qu’Aron les a ajoutées via son agent. | Conserver la manière de travailler dans Notion pour que l’agent puisse la retrouver, sans recopier les consignes à chaque demande. La relecture de l’email entier permet aussi de repérer les erreurs après personnalisation. |
+| **Aron précise le discours commercial.** | La référence du **4 novembre**, liée depuis son playbook, contient le pitch, une trame de premier email, une relance et les réponses aux objections. La page indique une demande et une validation par Aron. | Préparer les messages avec le positionnement de l’entreprise et répondre à une objection avec un rôle précis pour Vertigo. |
+| **Une préparation en série échoue.** | Après **« je veux mes 150 »**, le retour transmis par le propriétaire distingue la création non confirmée du dernier total fiable. Un autre extrait partagé montre une erreur de lecture CSV, `ServiceUnavailableError`. | Savoir ce qui reste à faire et conserver les résultats fiables, sans prendre un volume demandé pour un volume réalisé. |
+| **Une réparation est relue.** | Un reçu historique rapporte **6 mutations vérifiées sur 6**, avec les erreurs antérieures conservées et les règles d’autorité inchangées. L’état reste **OPEN / LEARN**. | Vérifier la réparation ciblée sans annoncer la validation de tout le parcours métier. |
+
+Un extrait du positionnement enregistré rend le résultat concret :
+
+> « Nous transformons vos photos et vidéos existantes en expériences web qui se révèlent au défilement. »
+
+Et pour répondre à un prospect qui a déjà une agence :
+
+> « Votre agence peut continuer à gérer votre site. Nous pouvons concevoir la séquence, préparer les médias et travailler avec elle sur son intégration, après vérification des possibilités techniques. »
+
+**Preuves :** [méthodes et positionnement Notion](evidence/07-notion-operational-artifacts.json),
+[usages et incidents transmis par le propriétaire](evidence/08-owner-reported-operational-usage.json),
+[réparation relue](evidence/03-admin-recovery.json).
+Les méthodes sont présentes dans les documents consultés ; leur chargement à
+chaque prompt exige sa propre preuve. Les [sondes CSV sélectionnées](evidence/04-csv-reporting.json)
+ne démontrent pas la remontée automatique de l’incident depuis le compte d’Aron.
+
+Ces cas viennent d’échanges réels et de documents consultés le **9 novembre 2026**.
+Les instantanés Notion retournés portent des dates du 16 octobre au 6 novembre.
+Les extraits retirent coordonnées, identifiants et données clients ; ils ne
+reconstituent aucune réponse privée. Le [détail des cas](docs/UTILISER-VERTIGO.md)
+permet de poursuivre la lecture, source par source.
+
+## Le système en un coup d’œil
+
+![Le plugin fournit les compétences à l’agent ; les connecteurs utilisent les outils du compte ; Notion conserve META et SALES ; le harness contrôle les appels reçus et les relectures prévues.](docs/illustrations/couches.svg)
 
 | Élément | Son rôle dans le travail quotidien |
 |---|---|
@@ -73,7 +116,7 @@ MCP est le protocole qui permet à l’agent d’appeler les outils du serveur.
 
 ## Lecture en cinq minutes
 
-1. [Cas réels : demandes, résultats et utilité](docs/UTILISER-VERTIGO.md).
+1. [L’équipe au travail](#célia-manager--coordonner-le-travail-de-léquipe), [Daily GO](#le-daily-go--reprendre-et-recevoir-une-priorité-expliquée) et [résultats](#les-autres-résultats-concrets), sur cette page.
 2. [Architecture et séparation des responsabilités](docs/ARCHITECTURE.md).
 3. [Trois parcours concrets, de la demande aux preuves](docs/PARCOURS.md).
 4. [Ce qui est prouvé, déclaré ou encore inconnu](docs/STATE-OF-EVIDENCE.md).
@@ -87,15 +130,6 @@ Pour aller jusqu’aux sources : [carte du code](docs/CODE-MAP.md),
 La [revue Codex indépendante](verification/independent-review.md) approuve ce
 dossier de lecture. Le [rapport de tests](verification/RESULTS.md) expose aussi
 les trois attentes de l’ancien dépôt qui restent en échec dans cette copie.
-
-## Le Daily GO, résultat concret de cette construction
-
-À « On reprend ? », la méthode demande de relire le cap applicable, les règles et
-le travail accessible, puis de proposer une priorité expliquée **avec un travail
-préparé**. Exemple fictif : fiche client et trame prêtes, créneau laissé au choix
-humain. Le modèle fait cette analyse ; le harness ne calcule pas un score universel.
-Le propriétaire rapporte avoir vu ce parcours fonctionner. Cela ne remplace pas
-une trace indépendante de chaque reprise dans chaque compte.
 
 ## Comment lire le statut du produit
 

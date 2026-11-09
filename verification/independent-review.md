@@ -58,3 +58,11 @@ réattribue pas les publications historiques de l’opérateur.
 Cette revue est restée locale et en lecture seule, sans test ni outil live.
 Le modèle exact et sa consommation ne sont pas exposés. L’approbation porte
 sur ces ajouts documentaires, sans certification de la production.
+
+## Cas visibles à l’arrivée dans le dépôt
+
+Le même agent Codex a relu l’intégration des cas dans le README et rendu
+**APPROVE**. Les trois illustrations et les six cas y sont lisibles sans ouvrir
+une autre page. La relecture conserve les attributions, les niveaux de preuve
+et le récit du propriétaire. L’ancien exemple fictif du Daily GO a été retiré.
+Aucun test ni accès réseau n’a été effectué par le relecteur.

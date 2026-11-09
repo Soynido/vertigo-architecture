@@ -35,7 +35,7 @@ les preuves copiées ; ils ne réécrivent pas ses signatures de compte.
 
 ## Cas opérationnels ajoutés le 9 novembre
 
-À la demande du propriétaire, la page d’usage et ses illustrations conservent
+À la demande du propriétaire, le README, la page d’usage et ses illustrations conservent
 les prénoms Célia, Aron et Julian. Célia y figure comme manager. Les nouvelles
 pièces documentent des contenus réels consultés dans Notion et des usages
 rapportés ; leurs résumés retirent identifiants, coordonnées et données clients.

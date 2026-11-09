@@ -1,0 +1,25 @@
+{
+  "kind": "README_OPERATIONAL_ENTRY_CHECK/1",
+  "prepared_on": "2026-11-09",
+  "scope": "Existing approved operational cases and three SVGs embedded in README",
+  "real_cases_visible": 6,
+  "images_embedded": 3,
+  "relative_links_and_fragments_checked": 117,
+  "owner_problem_section_preserved": true,
+  "fictitious_readme_example_removed": true,
+  "new_live_calls": 0,
+  "new_product_code_changes": 0,
+  "production_deployments": 0,
+  "notion_writes": 0,
+  "rules_or_history_mutations": 0,
+  "independent_review": "CODEX_READ_ONLY_APPROVE",
+  "editorial_first_name_exception_paths": 8,
+  "exact_secret_and_mailbox_checks_unchanged": true,
+  "issues": [],
+  "passed": true,
+  "limits": [
+    "No new real-chat or production test.",
+    "Visuals and case evidence unchanged from approved operational page.",
+    "Notion snapshot dates and evidence limits retained in README."
+  ]
+}

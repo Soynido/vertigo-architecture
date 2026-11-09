@@ -1,11 +1,11 @@
 {
   "kind": "PRIVATE_VALUE_COMPARISON/1",
-  "files_checked": 505,
+  "files_checked": 506,
   "original_values_exported": false,
   "collaborator_names_and_mailboxes_compared_privately": true,
   "findings": [],
   "passed": true,
-  "authorized_editorial_first_name_paths": 7,
+  "authorized_editorial_first_name_paths": 8,
   "first_name_exceptions_authorized_by_owner": true,
   "private_secret_and_mailbox_checks_without_exceptions": true
 }

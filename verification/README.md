@@ -24,5 +24,8 @@ liens et fragments, les rendus SVG inspectés et la portée des nouvelles pièce
 Notion. Elle conserve l’exception sur les prénoms demandée par le propriétaire ;
 les contrôles des secrets et coordonnées restent appliqués.
 
+La [vérification de l’entrée du dépôt](readme-operational-entry.json) couvre
+l’intégration des cas dans le README, les trois images et les liens internes.
+
 Après l’alerte GitGuardian : [analyse et correction](GITGUARDIAN-20261109.md),
 [scan standard complémentaire](secret-scan.json).
